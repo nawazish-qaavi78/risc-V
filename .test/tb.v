@@ -290,7 +290,7 @@ end
              i = i + 1'b1;
              if(Result === 32'h02000000) $display("21. lui implementation is correct ");
              else begin
-                 $display("21. lui implementation is incorrect");
+                 $display("21. lui implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -299,7 +299,7 @@ end
              i = i + 1'b1;
              if(Result === 32'h02000060) $display("22. auipc implementation is correct ");
              else begin
-                 $display("22. auipc implementation is incorrect");
+                 $display("22. auipc implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -310,7 +310,7 @@ end
              if(MemWrite && !reset) begin
                  if(DataAdr === 33 & WriteData === 1) $display ("23. sb implementation is correct");
                  else begin
-                     $display("23. sb implementation is incorrect");
+                     $display("23. sb implementation is incorrect, Result = %d", Result);
                      fault_instrs = fault_instrs + 1'b1;
                  end
              end
@@ -322,7 +322,7 @@ end
              if(MemWrite && !reset) begin
                  if(DataAdr === 38 & WriteData === -3) $display ("24. sh implementation is correct");
                  else begin
-                     $display("24. sh implementation is incorrect");
+                     $display("24. sh implementation is incorrect, Result = %d", Result);
                      fault_instrs = fault_instrs + 1'b1;
                  end
              end
@@ -334,7 +334,7 @@ end
              if(MemWrite && !reset) begin
                  if(DataAdr === 40 & WriteData === 16) $display ("25. sw implementation is correct");
                  else begin
-                     $display("25. sw implementation is incorrect");
+                     $display("25. sw implementation is incorrect, Result = %d", Result);
                      fault_instrs = fault_instrs + 1'b1;
                  end
              end
@@ -344,7 +344,7 @@ end
              i = i + 1'b1;
              if(DataAdr === 33 & Result === 1 ) $display ("26. lb implementation is correct");
              else begin
-                 $display("26. lb implementation is incorrect");
+                 $display("26. lb implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -353,7 +353,7 @@ end
              i = i + 1'b1;
              if(DataAdr === 38 & Result === -3 ) $display ("27. lh implementation is correct");
              else begin
-                 $display("27. lh implementation is incorrect");
+                 $display("27. lh implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -362,7 +362,7 @@ end
              i = i + 1'b1;
              if(DataAdr === 40 & Result === 16) $display ("28. lw implementation is correct");
              else begin
-                 $display("28. lw implementation is incorrect");
+                 $display("28. lw implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -371,7 +371,7 @@ end
              i = i + 1'b1;
              if(DataAdr === 33 & Result === 1) $display ("29. lbu implementation is correct");
              else begin
-                 $display("29. lbu implementation is incorrect");
+                 $display("29. lbu implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -380,7 +380,7 @@ end
              i = i + 1'b1;
              if(DataAdr === 38 & Result === 32'h0000FFFD) $display ("30. lhu implementation is correct");
              else begin
-                 $display("30. lhu implementation is incorrect");
+                 $display("30. lhu implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -398,7 +398,7 @@ end
              i = i + 1'b1;
              if(Result === 5) $display("31. blt implementation is correct ");
              else begin
-                 $display("31. blt implementation is incorrect");
+                 $display("31. blt implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -416,7 +416,7 @@ end
              i = i + 1'b1;
              if(Result === -6) $display("32. bge implementation is correct");
              else begin
-                 $display("32. bge implementation is incorrect");
+                 $display("32. bge implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -434,13 +434,13 @@ end
              i = i + 1'b1;
              if(Result === 5) $display("33. bltu implementation is correct ");
              else begin
-                 $display("33. bltu implementation is incorrect");
+                 $display("33. bltu implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
 
          BGEU_IN : begin
-             if(Result <= 5) $display("34. bgeu is executing");
+             if(Result <= 5) $display("34. bgeu is executing, Result = %d", Result);
              else begin
                  $display("bgeu struck in loop");
                  flag = 1;
@@ -452,7 +452,7 @@ end
              i = i + 1'b1;
              if(Result === 0) $display("34. bgeu implementation is correct ");
              else begin
-                 $display("34. bgeu implementation is incorrect");
+                 $display("34. bgeu implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -470,7 +470,7 @@ end
              i = i + 1'b1;
              if(Result === 5) $display("35. bne implementation is correct ");
              else begin
-                 $display("35. bne implementation is incorrect");
+                 $display("35. bne implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -487,7 +487,7 @@ end
              i = i + 1'b1;
              if(Result === 4) $display("36. beq implementation is correct ");
              else begin
-                 $display("36. beq implementation is incorrect");
+                 $display("36. beq implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -496,7 +496,7 @@ end
              i = i + 1'b1;
              if (Result === 32'h130) $display("37. jalr implementation is correct ");
              else begin
-                 $display("37. jalr implementation is incorrect");
+                 $display("37. jalr implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -505,7 +505,7 @@ end
              i = i + 1'b1;
              if (Result === 32'h13C ) $display("38. jal implementation is correct ");
              else begin
-                 $display("38. jal implementation is incorrect");
+                 $display("38. jal implementation is incorrect, Result = %d", Result);
              end
          end
 

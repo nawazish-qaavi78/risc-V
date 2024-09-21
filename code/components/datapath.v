@@ -2,8 +2,8 @@
 // datapath.v
 module datapath (
     input         clk, reset,
-    input [1:0]   ResultSrc,
-    input         PCSrc, ALUSrc, UCtrl, PCSrc1,
+    input [1:0]   ResultSrc, PCSrc,
+    input         ALUSrc, UCtrl,
     input         RegWrite, 
     input [2:0]   ImmSrc,
     input [2:0]   ALUControl,
@@ -22,7 +22,7 @@ wire [31:0] ImmExt, SrcA, SrcB, WriteData, ALUResult;
 reset_ff #(32) pcreg(clk, reset, PCNext, PC);
 adder          pcadd4(PC, 32'd4, PCPlus4);
 adder          pcaddbranch(PC, ImmExt, PCTarget);
-mux3 #(32)     pcmux(PCPlus4, PCTarget, ALUResult, {PCSrc1,PCSrc}, PCNext);
+mux3 #(32)     pcmux(PCPlus4, PCTarget, ALUResult, PCSrc, PCNext);
 mux2 #(32)		umux(PCTarget, ImmExt, UCtrl, UOut);
 
 // register file logic
