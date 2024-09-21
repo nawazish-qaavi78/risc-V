@@ -15,11 +15,14 @@ always @(a, b, alu_ctrl) begin
         3'b010:  alu_out <= a & b;       // AND
         3'b011:  alu_out <= a | b;       // OR
 		  3'b100:  alu_out <= a ^ b;		  // XOR
-		  3'b101:  alu_out <= a < b;		  // less than
-        3'b101:  begin                   // SLT
+
+        3'b101:  begin                   // SLT  also given to less than so check for that later
                      if (a[31] != b[31]) alu_out <= a[31] ? 0 : 1;
                      else alu_out <= a < b ? 1 : 0;
                  end
+		  // should look into actually what these are doing		  
+		  3'b110:  alu_out <= a >> b;
+		  3'b111:  alu_out <= a >>> b;
         default: alu_out = 0;
     endcase
 end

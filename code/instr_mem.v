@@ -18,5 +18,6 @@ end
 // combinational read logic
 assign instr = instr_ram[instr_addr[31:2]];
 
+
 endmodule
 

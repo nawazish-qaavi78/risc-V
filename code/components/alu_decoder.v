@@ -9,6 +9,10 @@ module alu_decoder (
     output reg [2:0] ALUControl
 );
 
+/*
+	alucontrols = ,6,7
+*/
+
 always @(*) begin
     case (ALUOp)
         2'b00: ALUControl = 3'b000;             // addition
@@ -24,7 +28,10 @@ always @(*) begin
 					 
 					 3'b011:  ALUControl = 3'b101; // less than
 					 3'b100:  ALUControl = 3'b100; // xor (didn't look into the op3 thing with this funct3)
-					 3'b101: ;
+					 3'b101:  begin
+							if  (funct7b5) ALUControl = 3'b110;
+							else ALUControl = 3'b111;
+					 end
 					 
                 3'b110:  ALUControl = 3'b011; // or, ori
                 3'b111:  ALUControl = 3'b010; // and, andi
