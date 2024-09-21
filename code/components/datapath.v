@@ -6,7 +6,7 @@ module datapath (
     input         ALUSrc, UCtrl,
     input         RegWrite, 
     input [2:0]   ImmSrc,
-    input [2:0]   ALUControl,
+    input [3:0]   ALUControl,
     output        Zero,
     output [31:0] PC,
     input  [31:0] Instr,

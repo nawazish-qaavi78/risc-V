@@ -13,179 +13,179 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:00 on Sep 21,2024
+# Start time: 00:49:22 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v 
 # -- Compiling module t1c_riscv_cpu
 # 
 # Top level modules:
 # 	t1c_riscv_cpu
-# End time: 19:39:00 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:22 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/riscv_cpu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:00 on Sep 21,2024
+# Start time: 00:49:22 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/riscv_cpu.v 
 # -- Compiling module riscv_cpu
 # 
 # Top level modules:
 # 	riscv_cpu
-# End time: 19:39:00 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:22 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/data_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:00 on Sep 21,2024
+# Start time: 00:49:22 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/data_mem.v 
 # -- Compiling module data_mem
 # 
 # Top level modules:
 # 	data_mem
-# End time: 19:39:00 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:22 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reset_ff.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:00 on Sep 21,2024
+# Start time: 00:49:22 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reset_ff.v 
 # -- Compiling module reset_ff
 # 
 # Top level modules:
 # 	reset_ff
-# End time: 19:39:00 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:22 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reg_file.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:00 on Sep 21,2024
+# Start time: 00:49:22 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reg_file.v 
 # -- Compiling module reg_file
 # 
 # Top level modules:
 # 	reg_file
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:01
+# End time: 00:49:22 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux4.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:22 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux4.v 
 # -- Compiling module mux4
 # 
 # Top level modules:
 # 	mux4
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:22 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux3.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:23 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux3.v 
 # -- Compiling module mux3
 # 
 # Top level modules:
 # 	mux3
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:23 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:23 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux2.v 
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:23 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:23 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v 
 # -- Compiling module main_decoder
 # 
 # Top level modules:
 # 	main_decoder
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:23 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/imm_extend.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:23 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/imm_extend.v 
 # -- Compiling module imm_extend
 # 
 # Top level modules:
 # 	imm_extend
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:23 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:23 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:23 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/controller.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:23 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/controller.v 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:23 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:23 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v 
 # -- Compiling module alu_decoder
 # 
 # Top level modules:
 # 	alu_decoder
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:23 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:23 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:23 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/adder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:23 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/adder.v 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:24 on Sep 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/instr_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:24 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/instr_mem.v 
 # -- Compiling module instr_mem
 # 
 # Top level modules:
 # 	instr_mem
-# End time: 19:39:01 on Sep 21,2024, Elapsed time: 0:00:00
+# End time: 00:49:24 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test/tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:39:01 on Sep 21,2024
+# Start time: 00:49:24 on Sep 22,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test" C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test/tb.v 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 19:39:02 on Sep 21,2024, Elapsed time: 0:00:01
+# End time: 00:49:24 on Sep 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 19:39:02 on Sep 21,2024
+# Start time: 00:49:24 on Sep 22,2024
 # Loading work.tb
 # Loading work.t1c_riscv_cpu
 # Loading work.riscv_cpu
@@ -211,9 +211,9 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: nawaz  Hostname: NAWAZISHQAAVI  ProcessID: 18232
-#           Attempting to use alternate WLF file "./wlft348ktr".
+#           Attempting to use alternate WLF file "./wlft514qc3".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft348ktr
+#           Using alternate file: ./wlft514qc3
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -221,17 +221,17 @@
 # run 2000 ns
 # 1. addi implementation is correct for x0 
 # 2. addi implementation is correct 
-# 3. slli implementation is incorrect, Result =         28
+# 3. slli implementation is correct 
 # 4. slti implementation is incorrect, Result =          1
 # 5. sltiu implementation is correct 
 # 6. xori implementation is correct 
 # 7. srli implementation is correct 
-# 8. srai implementation is incorrect, Result =          0
+# 8. srai implementation is incorrect, Result =  536870911
 # 9. ori implementation is correct 
 # 10. andi implementation is correct
 # 11. add implementation is correct 
 # 12. sub implementation is correct 
-# 13. sll implementation is incorrect, Result =          0
+# 13. sll implementation is correct 
 # 14. slt implementation is incorrect, Result =          1
 # 15. sltu implementation is correct 
 # 16. xor implementation is correct 
@@ -245,3 +245,5 @@
 # ** Note: $stop    : C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test/tb.v(102)
 #    Time: 255 ns  Iteration: 0  Instance: /tb
 # Break in Module tb at C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test/tb.v line 102
+# End time: 00:49:43 on Sep 22,2024, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 4

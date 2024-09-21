@@ -11,7 +11,7 @@ module controller (
     output       ALUSrc, UCtrl,
     output       RegWrite, Jump,
     output [2:0] ImmSrc,
-    output [2:0] ALUControl
+    output [3:0] ALUControl
 );
 
 wire [1:0] ALUOp;
