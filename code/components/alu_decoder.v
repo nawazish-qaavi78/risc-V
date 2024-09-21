@@ -27,7 +27,7 @@ always @(*) begin
 					 3'b001:  ALUControl = 4'b1000; //also has some address loading look into it
                 3'b010:  ALUControl = 4'b0101; // slt, slti
 					 
-					 3'b011:  ALUControl = 4'b0101; // less than
+					 3'b011:  ALUControl = 4'b1001; // less than
 					 3'b100:  ALUControl = 4'b0100; // xor (didn't look into the op3 thing with this funct3)
 					 3'b101:  begin
 							if  (funct7b5) ALUControl = 4'b0110;
