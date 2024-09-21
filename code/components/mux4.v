@@ -9,10 +9,6 @@ module mux4 #(parameter WIDTH = 8) (
 
 assign y = sel[1] ? (sel[0] ? d3 : d2) : (sel[0] ? d1 : d0);
 
-always @(*) begin
-    $display("y = %d", y);
-end
-
 
 endmodule
 

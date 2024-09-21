@@ -5,7 +5,7 @@ module datapath (
     input [1:0]   ResultSrc,
     input         PCSrc, ALUSrc, UCtrl, PCSrc1,
     input         RegWrite, 
-    input [1:0]   ImmSrc,
+    input [2:0]   ImmSrc,
     input [2:0]   ALUControl,
     output        Zero,
     output [31:0] PC,
@@ -33,6 +33,7 @@ imm_extend     ext (Instr[31:7], ImmSrc, ImmExt);
 mux2 #(32)     srcbmux(WriteData, ImmExt, ALUSrc, SrcB);
 alu            alu (SrcA, SrcB, ALUControl, ALUResult, Zero);
 mux4 #(32)     resultmux(ALUResult, ReadData, PCPlus4, UOut, ResultSrc, Result);
+
 
 assign Mem_WrData = WriteData;
 assign Mem_WrAddr = ALUResult;

@@ -200,7 +200,7 @@ end
              i = i + 1'b1;
              if(Result === 17) $display("11. add implementation is correct ");
              else begin
-                 $display("11. add implementation is incorrect");
+                 $display("11. add implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -209,7 +209,7 @@ end
              i = i + 1'b1;
              if(Result === 15) $display("12. sub implementation is correct ");
              else begin
-                 $display("12. sub implementation is incorrect");
+                 $display("12. sub implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -219,7 +219,7 @@ end
              i = i + 1'b1;
              if(Result === 32) $display("13. sll implementation is correct ");
              else begin
-                 $display("13. sll implementation is incorrect");
+                 $display("13. sll implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -228,7 +228,7 @@ end
              i = i + 1'b1;
              if(Result === 0) $display("14. slt implementation is correct ");
              else begin
-                 $display("14. slt implementation is incorrect");
+                 $display("14. slt implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -237,7 +237,7 @@ end
              i = i + 1'b1;
              if(Result === 1) $display("15. sltu implementation is correct ");
              else begin
-                 $display("15. sltu implementation is incorrect");
+                 $display("15. sltu implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -246,7 +246,7 @@ end
              i = i + 1'b1;
              if(Result === 17) $display("16. xor implementation is correct ");
              else begin
-                 $display("16. xor implementation is incorrect");
+                 $display("16. xor implementation is incorrect, Result = %d", Result);
              end
          end
 
@@ -254,7 +254,7 @@ end
              i = i + 1'b1;
              if(Result === 8) $display("17. srl implementation is correct ");
              else begin
-                 $display("17. srl implementation is incorrect");
+                 $display("17. srl implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -263,7 +263,7 @@ end
              i = i + 1'b1;
              if(Result === 8) $display("18. sra implementation is correct ");
              else begin
-                 $display("18. sra implementation is incorrect");
+                 $display("18. sra implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -272,7 +272,7 @@ end
              i = i + 1'b1;
              if(Result === 17) $display("19. or implementation is correct ");
              else begin
-                 $display("19. or implementation is incorrect");
+                 $display("19. or implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -281,7 +281,7 @@ end
              i = i + 1'b1;
              if(Result === 0) $display("20. and implementation is correct ");
              else begin
-                 $display("20. and implementation is incorrect");
+                 $display("20. and implementation is incorrect, Result = %d", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end

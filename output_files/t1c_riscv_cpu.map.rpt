@@ -1,5 +1,5 @@
 Analysis & Synthesis report for t1c_riscv_cpu
-Sat Sep 21 10:30:43 2024
+Sat Sep 21 11:52:43 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -28,14 +28,13 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  20. Parameter Settings for User Entity Instance: riscv_cpu:rvcpu|datapath:dp|mux4:resultmux
  21. Parameter Settings for User Entity Instance: instr_mem:instrmem
  22. Parameter Settings for User Entity Instance: data_mem:datamem
- 23. Port Connectivity Checks: "riscv_cpu:rvcpu|datapath:dp|imm_extend:ext"
- 24. Port Connectivity Checks: "riscv_cpu:rvcpu|datapath:dp|adder:pcadd4"
- 25. Port Connectivity Checks: "riscv_cpu:rvcpu|controller:c|main_decoder:md"
- 26. Port Connectivity Checks: "riscv_cpu:rvcpu|controller:c"
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
- 30. Analysis & Synthesis Suppressed Messages
+ 23. Port Connectivity Checks: "riscv_cpu:rvcpu|datapath:dp|adder:pcadd4"
+ 24. Port Connectivity Checks: "riscv_cpu:rvcpu|datapath:dp"
+ 25. Port Connectivity Checks: "riscv_cpu:rvcpu|controller:c"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+ 29. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -62,13 +61,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Sep 21 10:30:43 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sat Sep 21 11:52:43 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; t1c_riscv_cpu                               ;
 ; Top-level Entity Name              ; t1c_riscv_cpu                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,016                                       ;
-;     Total combinational functions  ; 2,000                                       ;
+; Total logic elements               ; 4,088                                       ;
+;     Total combinational functions  ; 2,072                                       ;
 ;     Dedicated logic registers      ; 2,080                                       ;
 ; Total registers                    ; 2080                                        ;
 ; Total pins                         ; 228                                         ;
@@ -184,29 +183,29 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
-+----------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                                                    ; Library ;
-+----------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; code/t1c_riscv_cpu.v             ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/t1c_riscv_cpu.v           ;         ;
-; code/riscv_cpu.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/riscv_cpu.v               ;         ;
-; code/instr_mem.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/instr_mem.v               ;         ;
-; code/data_mem.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/data_mem.v                ;         ;
-; code/components/reset_ff.v       ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/reset_ff.v     ;         ;
-; code/components/reg_file.v       ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/reg_file.v     ;         ;
-; code/components/mux4.v           ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/mux4.v         ;         ;
-; code/components/mux3.v           ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/mux3.v         ;         ;
-; code/components/mux2.v           ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/mux2.v         ;         ;
-; code/components/main_decoder.v   ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/main_decoder.v ;         ;
-; code/components/imm_extend.v     ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/imm_extend.v   ;         ;
-; code/components/datapath.v       ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/datapath.v     ;         ;
-; code/components/controller.v     ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/controller.v   ;         ;
-; code/components/alu_decoder.v    ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu_decoder.v  ;         ;
-; code/components/alu.v            ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu.v          ;         ;
-; code/components/adder.v          ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/adder.v        ;         ;
-; code/rv32i_test.hex              ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/rv32i_test.hex            ;         ;
-+----------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                              ;
++----------------------------------+-----------------+---------------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                                                           ; Library ;
++----------------------------------+-----------------+---------------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; code/t1c_riscv_cpu.v             ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v           ;         ;
+; code/riscv_cpu.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/riscv_cpu.v               ;         ;
+; code/instr_mem.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/instr_mem.v               ;         ;
+; code/data_mem.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/data_mem.v                ;         ;
+; code/components/reset_ff.v       ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reset_ff.v     ;         ;
+; code/components/reg_file.v       ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reg_file.v     ;         ;
+; code/components/mux4.v           ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux4.v         ;         ;
+; code/components/mux3.v           ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux3.v         ;         ;
+; code/components/mux2.v           ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux2.v         ;         ;
+; code/components/main_decoder.v   ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v ;         ;
+; code/components/imm_extend.v     ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/imm_extend.v   ;         ;
+; code/components/datapath.v       ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v     ;         ;
+; code/components/controller.v     ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/controller.v   ;         ;
+; code/components/alu_decoder.v    ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v  ;         ;
+; code/components/alu.v            ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu.v          ;         ;
+; code/components/adder.v          ; yes             ; User Verilog HDL File                       ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/adder.v        ;         ;
+; code/rv32i_test.hex              ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/rv32i_test.hex            ;         ;
++----------------------------------+-----------------+---------------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -214,17 +213,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,016     ;
+; Estimated Total logic elements              ; 4,088     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2000      ;
+; Total combinational functions               ; 2072      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1742      ;
-;     -- 3 input functions                    ; 183       ;
-;     -- <=2 input functions                  ; 75        ;
+;     -- 4 input functions                    ; 1786      ;
+;     -- 3 input functions                    ; 205       ;
+;     -- <=2 input functions                  ; 81        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1888      ;
-;     -- arithmetic mode                      ; 112       ;
+;     -- normal mode                          ; 1950      ;
+;     -- arithmetic mode                      ; 122       ;
 ;                                             ;           ;
 ; Total registers                             ; 2080      ;
 ;     -- Dedicated logic registers            ; 2080      ;
@@ -236,7 +235,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 2080      ;
-; Total fan-out                               ; 14358     ;
+; Total fan-out                               ; 14612     ;
 ; Average fan-out                             ; 3.17      ;
 +---------------------------------------------+-----------+
 
@@ -246,22 +245,22 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                          ; Entity Name   ; Library Name ;
 +------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+---------------+--------------+
-; |t1c_riscv_cpu               ; 2000 (66)           ; 2080 (0)                  ; 0           ; 0            ; 0       ; 0         ; 228  ; 0            ; |t1c_riscv_cpu                                               ; t1c_riscv_cpu ; work         ;
+; |t1c_riscv_cpu               ; 2072 (66)           ; 2080 (0)                  ; 0           ; 0            ; 0       ; 0         ; 228  ; 0            ; |t1c_riscv_cpu                                               ; t1c_riscv_cpu ; work         ;
 ;    |data_mem:datamem|        ; 1424 (1424)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|data_mem:datamem                              ; data_mem      ; work         ;
-;    |instr_mem:instrmem|      ; 138 (138)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|instr_mem:instrmem                            ; instr_mem     ; work         ;
-;    |riscv_cpu:rvcpu|         ; 372 (0)             ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu                               ; riscv_cpu     ; work         ;
-;       |controller:c|         ; 36 (8)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c                  ; controller    ; work         ;
+;    |instr_mem:instrmem|      ; 156 (156)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|instr_mem:instrmem                            ; instr_mem     ; work         ;
+;    |riscv_cpu:rvcpu|         ; 426 (0)             ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu                               ; riscv_cpu     ; work         ;
+;       |controller:c|         ; 45 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c                  ; controller    ; work         ;
 ;          |alu_decoder:ad|    ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|alu_decoder:ad   ; alu_decoder   ; work         ;
 ;          |main_decoder:md|   ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|main_decoder:md  ; main_decoder  ; work         ;
-;       |datapath:dp|          ; 336 (0)             ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp                   ; datapath      ; work         ;
+;       |datapath:dp|          ; 381 (0)             ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp                   ; datapath      ; work         ;
 ;          |adder:pcadd4|      ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|adder:pcadd4      ; adder         ; work         ;
 ;          |adder:pcaddbranch| ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|adder:pcaddbranch ; adder         ; work         ;
-;          |alu:alu|           ; 100 (100)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu           ; alu           ; work         ;
-;          |imm_extend:ext|    ; 57 (57)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext    ; imm_extend    ; work         ;
-;          |mux2:srcbmux|      ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux2:srcbmux      ; mux2          ; work         ;
+;          |alu:alu|           ; 130 (130)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu           ; alu           ; work         ;
+;          |imm_extend:ext|    ; 52 (52)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext    ; imm_extend    ; work         ;
+;          |mux2:srcbmux|      ; 37 (37)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux2:srcbmux      ; mux2          ; work         ;
 ;          |mux3:pcmux|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux3:pcmux        ; mux3          ; work         ;
 ;          |mux4:resultmux|    ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux4:resultmux    ; mux4          ; work         ;
-;          |reset_ff:pcreg|    ; 34 (34)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg    ; reset_ff      ; work         ;
+;          |reset_ff:pcreg|    ; 35 (35)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg    ; reset_ff      ; work         ;
 +------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1333,10 +1332,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[0]  ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[24] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext|Mux9  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux4:resultmux|y[10] ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 62 LEs               ; 93 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux20        ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[2]  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux4:resultmux|y[1]  ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 62 LEs               ; 93 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux22        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext|Mux0  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext|Mux10 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
@@ -1454,15 +1454,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "riscv_cpu:rvcpu|datapath:dp|imm_extend:ext"                                                                                                     ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                                                                                                        ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-; immsrc ; Input ; Warning  ; Input port expression (2 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "immsrc[3..2]" will be connected to GND. ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------+
 ; Port Connectivity Checks: "riscv_cpu:rvcpu|datapath:dp|adder:pcadd4" ;
 +----------+-------+----------+----------------------------------------+
@@ -1474,22 +1465,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+----------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "riscv_cpu:rvcpu|controller:c|main_decoder:md"                                                                               ;
-+--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                                   ;
-+--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
-; ImmSrc ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (2 bits) it drives; bit(s) "ImmSrc[2..2]" have no fanouts ;
-+--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "riscv_cpu:rvcpu|datapath:dp"                                                                                                                                                         ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ResultSrc ; Input ; Warning  ; Input port expression (3 bits) is wider than the input port (2 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "riscv_cpu:rvcpu|controller:c"                                                       ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Jump ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "riscv_cpu:rvcpu|controller:c"                                                                                                                                              ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                               ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ResultSrc ; Output ; Warning  ; Output or bidir port (2 bits) is smaller than the port expression (3 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
+; Jump      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1503,18 +1495,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 2048                        ;
 ;     ENA CLR           ; 1                           ;
 ;     ENA CLR SLD       ; 1                           ;
-; cycloneiii_lcell_comb ; 2000                        ;
-;     arith             ; 112                         ;
+; cycloneiii_lcell_comb ; 2072                        ;
+;     arith             ; 122                         ;
 ;         2 data inputs ; 60                          ;
-;         3 data inputs ; 52                          ;
-;     normal            ; 1888                        ;
+;         3 data inputs ; 62                          ;
+;     normal            ; 1950                        ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 13                          ;
-;         3 data inputs ; 131                         ;
-;         4 data inputs ; 1742                        ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 143                         ;
+;         4 data inputs ; 1786                        ;
 ;                       ;                             ;
 ; Max LUT depth         ; 19.70                       ;
-; Average LUT depth     ; 11.10                       ;
+; Average LUT depth     ; 11.28                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1533,108 +1525,110 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 21 10:30:29 2024
+    Info: Processing started: Sat Sep 21 11:52:31 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off t1c_riscv_cpu -c t1c_riscv_cpu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file code/t1c_riscv_cpu.v
-    Info (12023): Found entity 1: t1c_riscv_cpu File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/t1c_riscv_cpu.v Line: 4
+    Info (12023): Found entity 1: t1c_riscv_cpu File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file code/riscv_cpu.v
-    Info (12023): Found entity 1: riscv_cpu File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/riscv_cpu.v Line: 4
+    Info (12023): Found entity 1: riscv_cpu File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/riscv_cpu.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file code/instr_mem.v
-    Info (12023): Found entity 1: instr_mem File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/instr_mem.v Line: 4
+    Info (12023): Found entity 1: instr_mem File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/instr_mem.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file code/data_mem.v
-    Info (12023): Found entity 1: data_mem File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/data_mem.v Line: 4
+    Info (12023): Found entity 1: data_mem File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/data_mem.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/reset_ff.v
-    Info (12023): Found entity 1: reset_ff File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/reset_ff.v Line: 4
+    Info (12023): Found entity 1: reset_ff File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reset_ff.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/reg_file.v
-    Info (12023): Found entity 1: reg_file File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/reg_file.v Line: 8
+    Info (12023): Found entity 1: reg_file File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reg_file.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/mux4.v
-    Info (12023): Found entity 1: mux4 File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/mux4.v Line: 4
+    Info (12023): Found entity 1: mux4 File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux4.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/mux3.v
-    Info (12023): Found entity 1: mux3 File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/mux3.v Line: 4
+    Info (12023): Found entity 1: mux3 File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux3.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/mux2.v
-    Info (12023): Found entity 1: mux2 File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/mux2.v Line: 4
-Warning (10229): Verilog HDL Expression warning at main_decoder.v(18): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/main_decoder.v Line: 18
-Warning (10229): Verilog HDL Expression warning at main_decoder.v(20): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/main_decoder.v Line: 20
-Warning (10229): Verilog HDL Expression warning at main_decoder.v(22): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/main_decoder.v Line: 22
-Warning (10229): Verilog HDL Expression warning at main_decoder.v(23): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/main_decoder.v Line: 23
-Warning (10229): Verilog HDL Expression warning at main_decoder.v(25): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/main_decoder.v Line: 25
-Warning (10229): Verilog HDL Expression warning at main_decoder.v(26): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/main_decoder.v Line: 26
-Warning (10229): Verilog HDL Expression warning at main_decoder.v(27): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/main_decoder.v Line: 27
-Warning (10229): Verilog HDL Expression warning at main_decoder.v(29): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/main_decoder.v Line: 29
+    Info (12023): Found entity 1: mux2 File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux2.v Line: 4
+Warning (10229): Verilog HDL Expression warning at main_decoder.v(18): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v Line: 18
+Warning (10229): Verilog HDL Expression warning at main_decoder.v(20): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v Line: 20
+Warning (10229): Verilog HDL Expression warning at main_decoder.v(22): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v Line: 22
+Warning (10229): Verilog HDL Expression warning at main_decoder.v(23): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v Line: 23
+Warning (10229): Verilog HDL Expression warning at main_decoder.v(25): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v Line: 25
+Warning (10229): Verilog HDL Expression warning at main_decoder.v(26): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v Line: 26
+Warning (10229): Verilog HDL Expression warning at main_decoder.v(27): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v Line: 27
+Warning (10229): Verilog HDL Expression warning at main_decoder.v(29): truncated literal to match 13 bits File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/main_decoder.v
-    Info (12023): Found entity 1: main_decoder File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/main_decoder.v Line: 4
+    Info (12023): Found entity 1: main_decoder File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/imm_extend.v
-    Info (12023): Found entity 1: imm_extend File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/imm_extend.v Line: 3
+    Info (12023): Found entity 1: imm_extend File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/imm_extend.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/datapath.v
-    Info (12023): Found entity 1: datapath File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/datapath.v Line: 3
+    Info (12023): Found entity 1: datapath File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/controller.v
-    Info (12023): Found entity 1: controller File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/controller.v Line: 4
+    Info (12023): Found entity 1: controller File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/controller.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/alu_decoder.v
-    Info (12023): Found entity 1: alu_decoder File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu_decoder.v Line: 4
+    Info (12023): Found entity 1: alu_decoder File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/alu.v
-    Info (12023): Found entity 1: alu File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu.v Line: 4
+    Info (12023): Found entity 1: alu File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/adder.v
-    Info (12023): Found entity 1: adder File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/adder.v Line: 4
-Warning (10236): Verilog HDL Implicit Net warning at riscv_cpu.v(19): created implicit net for "PCSrc" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/riscv_cpu.v Line: 19
+    Info (12023): Found entity 1: adder File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/adder.v Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at riscv_cpu.v(19): created implicit net for "PCSrc" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/riscv_cpu.v Line: 19
 Info (12127): Elaborating entity "t1c_riscv_cpu" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at t1c_riscv_cpu.v(24): truncated value with size 32 to match size of target (1) File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/t1c_riscv_cpu.v Line: 24
-Info (12128): Elaborating entity "riscv_cpu" for hierarchy "riscv_cpu:rvcpu" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/t1c_riscv_cpu.v Line: 20
-Info (12128): Elaborating entity "controller" for hierarchy "riscv_cpu:rvcpu|controller:c" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/riscv_cpu.v Line: 20
-Info (12128): Elaborating entity "main_decoder" for hierarchy "riscv_cpu:rvcpu|controller:c|main_decoder:md" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/controller.v Line: 21
-Info (12128): Elaborating entity "alu_decoder" for hierarchy "riscv_cpu:rvcpu|controller:c|alu_decoder:ad" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/controller.v Line: 23
-Warning (10240): Verilog HDL Always Construct warning at alu_decoder.v(13): inferring latch(es) for variable "ALUControl", which holds its previous value in one or more paths through the always construct File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu_decoder.v Line: 13
-Info (10041): Inferred latch for "ALUControl[0]" at alu_decoder.v(13) File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu_decoder.v Line: 13
-Info (10041): Inferred latch for "ALUControl[1]" at alu_decoder.v(13) File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu_decoder.v Line: 13
-Info (10041): Inferred latch for "ALUControl[2]" at alu_decoder.v(13) File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu_decoder.v Line: 13
-Info (12128): Elaborating entity "datapath" for hierarchy "riscv_cpu:rvcpu|datapath:dp" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/riscv_cpu.v Line: 24
-Info (12128): Elaborating entity "reset_ff" for hierarchy "riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/datapath.v Line: 22
-Info (12128): Elaborating entity "adder" for hierarchy "riscv_cpu:rvcpu|datapath:dp|adder:pcadd4" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/datapath.v Line: 23
-Info (12128): Elaborating entity "mux3" for hierarchy "riscv_cpu:rvcpu|datapath:dp|mux3:pcmux" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/datapath.v Line: 25
-Info (12128): Elaborating entity "mux2" for hierarchy "riscv_cpu:rvcpu|datapath:dp|mux2:umux" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/datapath.v Line: 26
-Info (12128): Elaborating entity "reg_file" for hierarchy "riscv_cpu:rvcpu|datapath:dp|reg_file:rf" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/datapath.v Line: 29
-Info (12128): Elaborating entity "imm_extend" for hierarchy "riscv_cpu:rvcpu|datapath:dp|imm_extend:ext" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/datapath.v Line: 30
-Info (12128): Elaborating entity "alu" for hierarchy "riscv_cpu:rvcpu|datapath:dp|alu:alu" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/datapath.v Line: 34
-Warning (10272): Verilog HDL Case Statement warning at alu.v(19): case item expression covers a value already covered by a previous case item File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu.v Line: 19
-Info (12128): Elaborating entity "mux4" for hierarchy "riscv_cpu:rvcpu|datapath:dp|mux4:resultmux" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/datapath.v Line: 35
-Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:instrmem" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/t1c_riscv_cpu.v Line: 21
-Warning (10850): Verilog HDL warning at instr_mem.v(14): number of words (79) in memory file does not match the number of elements in the address range [0:511] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/instr_mem.v Line: 14
-Warning (10030): Net "instr_ram.data_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/instr_mem.v Line: 10
-Warning (10030): Net "instr_ram.waddr_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/instr_mem.v Line: 10
-Warning (10030): Net "instr_ram.we_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/instr_mem.v Line: 10
-Info (12128): Elaborating entity "data_mem" for hierarchy "data_mem:datamem" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/t1c_riscv_cpu.v Line: 22
+Warning (10230): Verilog HDL assignment warning at t1c_riscv_cpu.v(24): truncated value with size 32 to match size of target (1) File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 24
+Info (12128): Elaborating entity "riscv_cpu" for hierarchy "riscv_cpu:rvcpu" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 20
+Info (12128): Elaborating entity "controller" for hierarchy "riscv_cpu:rvcpu|controller:c" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/riscv_cpu.v Line: 20
+Info (12128): Elaborating entity "main_decoder" for hierarchy "riscv_cpu:rvcpu|controller:c|main_decoder:md" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/controller.v Line: 21
+Info (12128): Elaborating entity "alu_decoder" for hierarchy "riscv_cpu:rvcpu|controller:c|alu_decoder:ad" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/controller.v Line: 23
+Warning (10240): Verilog HDL Always Construct warning at alu_decoder.v(13): inferring latch(es) for variable "ALUControl", which holds its previous value in one or more paths through the always construct File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v Line: 13
+Info (10041): Inferred latch for "ALUControl[0]" at alu_decoder.v(13) File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v Line: 13
+Info (10041): Inferred latch for "ALUControl[1]" at alu_decoder.v(13) File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v Line: 13
+Info (10041): Inferred latch for "ALUControl[2]" at alu_decoder.v(13) File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v Line: 13
+Info (12128): Elaborating entity "datapath" for hierarchy "riscv_cpu:rvcpu|datapath:dp" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/riscv_cpu.v Line: 24
+Info (12128): Elaborating entity "reset_ff" for hierarchy "riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 22
+Info (12128): Elaborating entity "adder" for hierarchy "riscv_cpu:rvcpu|datapath:dp|adder:pcadd4" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 23
+Info (12128): Elaborating entity "mux3" for hierarchy "riscv_cpu:rvcpu|datapath:dp|mux3:pcmux" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 25
+Info (12128): Elaborating entity "mux2" for hierarchy "riscv_cpu:rvcpu|datapath:dp|mux2:umux" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 26
+Info (12128): Elaborating entity "reg_file" for hierarchy "riscv_cpu:rvcpu|datapath:dp|reg_file:rf" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 29
+Info (12128): Elaborating entity "imm_extend" for hierarchy "riscv_cpu:rvcpu|datapath:dp|imm_extend:ext" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 30
+Info (12128): Elaborating entity "alu" for hierarchy "riscv_cpu:rvcpu|datapath:dp|alu:alu" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 34
+Warning (10272): Verilog HDL Case Statement warning at alu.v(19): case item expression covers a value already covered by a previous case item File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu.v Line: 19
+Info (12128): Elaborating entity "mux4" for hierarchy "riscv_cpu:rvcpu|datapath:dp|mux4:resultmux" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 35
+Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:instrmem" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 21
+Warning (10850): Verilog HDL warning at instr_mem.v(14): number of words (79) in memory file does not match the number of elements in the address range [0:511] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/instr_mem.v Line: 14
+Warning (10030): Net "instr_ram.data_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/instr_mem.v Line: 10
+Warning (10030): Net "instr_ram.waddr_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/instr_mem.v Line: 10
+Warning (10030): Net "instr_ram.we_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/instr_mem.v Line: 10
+Info (12128): Elaborating entity "data_mem" for hierarchy "data_mem:datamem" File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 22
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "riscv_cpu:rvcpu|ResultSrc[2]" is missing source, defaulting to GND File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/riscv_cpu.v Line: 15
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr" is uninferred due to asynchronous read logic File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/reg_file.v Line: 16
-    Info (276007): RAM logic "data_mem:datamem|data_ram" is uninferred due to asynchronous read logic File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/data_mem.v Line: 11
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/db/t1c_riscv_cpu.ram0_instr_mem_8ff0214b.hdl.mif" contains "don't care" values -- overwriting them with 0s
+    Info (276007): RAM logic "riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr" is uninferred due to asynchronous read logic File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reg_file.v Line: 16
+    Info (276007): RAM logic "data_mem:datamem|data_ram" is uninferred due to asynchronous read logic File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/data_mem.v Line: 11
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/db/t1c_riscv_cpu.ram0_instr_mem_8ff0214b.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch riscv_cpu:rvcpu|controller:c|alu_decoder:ad|ALUControl[0] has unsafe behavior File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu_decoder.v Line: 13
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[10] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/reset_ff.v Line: 12
-Warning (13012): Latch riscv_cpu:rvcpu|controller:c|alu_decoder:ad|ALUControl[1] has unsafe behavior File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu_decoder.v Line: 13
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[10] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/reset_ff.v Line: 12
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[10] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/reset_ff.v Line: 12
-Warning (13012): Latch riscv_cpu:rvcpu|controller:c|alu_decoder:ad|ALUControl[2] has unsafe behavior File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/alu_decoder.v Line: 13
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[10] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/reset_ff.v Line: 12
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[10] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/code/components/reset_ff.v Line: 12
+Warning (13012): Latch riscv_cpu:rvcpu|controller:c|alu_decoder:ad|ALUControl[0] has unsafe behavior File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[10] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reset_ff.v Line: 12
+Warning (13012): Latch riscv_cpu:rvcpu|controller:c|alu_decoder:ad|ALUControl[1] has unsafe behavior File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[10] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reset_ff.v Line: 12
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[10] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reset_ff.v Line: 12
+Warning (13012): Latch riscv_cpu:rvcpu|controller:c|alu_decoder:ad|ALUControl[2] has unsafe behavior File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[10] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reset_ff.v Line: 12
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[10] File: C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/reset_ff.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/output_files/t1c_riscv_cpu.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/output_files/t1c_riscv_cpu.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4277 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4349 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 161 output pins
-    Info (21061): Implemented 4049 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4782 megabytes
-    Info: Processing ended: Sat Sep 21 10:30:43 2024
-    Info: Elapsed time: 00:00:14
+    Info (21061): Implemented 4121 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4779 megabytes
+    Info: Processing ended: Sat Sep 21 11:52:43 2024
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:12
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/output_files/t1c_riscv_cpu.map.smsg.
+The suppressed messages can be found in C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/output_files/t1c_riscv_cpu.map.smsg.
 
 
