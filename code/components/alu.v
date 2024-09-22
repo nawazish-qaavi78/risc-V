@@ -23,10 +23,10 @@ always @(a, b, alu_ctrl) begin
                  end
 		  // should look into actually what these are doing		  
 		  4'b0110:  alu_out <= a >> b[4:0];
-		  4'b0111:  alu_out <= a >>> b[4:0];
+		  4'b0111:  alu_out <= (a >> b[4:0]) | ({32{a[31]}} << (8 - b[4:0])); // since by default a is considered unsigned, >>> will just give  same result as >>
 		  4'b1000:  alu_out <= a << b[4:0];
 		  4'b1001:	alu_out <= a<b ? 1: 0; // this is for unsigned
-        default: alu_out = 0;
+        default:  alu_out = 0;
     endcase
 end
 
