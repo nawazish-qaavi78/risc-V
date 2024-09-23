@@ -440,7 +440,7 @@ end
          end
 
          BGEU_IN : begin
-             if(Result <= 5) $display("34. bgeu is executing, Result = %d", Result);
+             if(Result <= 5) $display("34. bgeu is executing");
              else begin
                  $display("bgeu struck in loop");
                  flag = 1;

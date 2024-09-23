@@ -20,6 +20,7 @@ vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing
 vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu_decoder.v}
 vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/alu.v}
 vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/adder.v}
+vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/slicer.v}
 vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/instr_mem.v}
 
 vlog -vlog01compat -work work +incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test {C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test/tb.v}

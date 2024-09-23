@@ -1,0 +1,18 @@
+
+// imm_extend.v - logic for sign extension
+module imm_extend (
+    input  [31:0]     RD,
+    input  [ 2:0]     funct3,
+    output reg [31:0] RDSlicer
+);
+
+always @(*) begin
+    case(funct3)
+        3'b000:  RDSlicer = {24{RD[31]},RD[7:0]} ; // SignExt([Address]7:0)
+		  3'b001:  RDSlicer = {16{RD[31]},RD[15:0]}; // SignExt([Address]15:0)
+        default: RDSlicer = 32'bx; // undefined
+    endcase
+end
+
+
+endmodule

@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/simulation/modelsim
 vadder
-Z1 !s110 1726991411
+Z1 !s110 1727100496
 !i10b 1
 !s100 jXE67fZjiCj2W4l?`i:H?0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1726991411.000000
+Z6 !s108 1727100496.000000
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/adder.v|
 !i113 1
@@ -106,7 +106,7 @@ R7
 R8
 R9
 vdata_mem
-Z10 !s110 1726991410
+Z10 !s110 1727100495
 !i10b 1
 !s100 cSgAMTM]e`<Hged1CI=SB3
 R2
@@ -122,7 +122,7 @@ R5
 r1
 !s85 0
 31
-Z12 !s108 1726991410.000000
+Z12 !s108 1727100495.000000
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/data_mem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code|C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/data_mem.v|
 !i113 1
@@ -132,16 +132,16 @@ R9
 vdatapath
 R1
 !i10b 1
-!s100 ZH[W3U2bBOf:PgDWfB40:0
+!s100 `EJecD[N=P0cD_NJ?8@a52
 R2
-IFjB@R_SG`;gdh0]RDiF]:1
+Ic=jeI_LOE;T4?JhZZoDMQ1
 R3
 R0
-w1726944718
+w1727099868
 8C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/datapath.v
 !i122 10
-L0 3 39
+L0 3 42
 R5
 r1
 !s85 0
@@ -178,17 +178,17 @@ R7
 R8
 R9
 vinstr_mem
-R1
+Z15 !s110 1727100497
 !i10b 1
 !s100 e6KH?^0b;2^`B8<723ZN22
 R2
 IP_n=S[WXngc8@=3fV;BoM0
 R3
 R0
-w1726927660
+w1727013592
 8C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/instr_mem.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/instr_mem.v
-!i122 15
+!i122 16
 R11
 R5
 r1
@@ -202,7 +202,7 @@ R7
 R13
 R9
 vmain_decoder
-R10
+R1
 !i10b 1
 !s100 LPW2=GA@meThceIO>2@;k3
 R2
@@ -218,7 +218,7 @@ R5
 r1
 !s85 0
 31
-R12
+R6
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/main_decoder.v|
 !i113 1
@@ -226,7 +226,7 @@ R7
 R8
 R9
 vmux2
-R10
+R1
 !i10b 1
 !s100 ifK8COc02]NDN7DP`BU<[1
 R2
@@ -237,12 +237,12 @@ R14
 8C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux2.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux2.v
 !i122 7
-Z15 L0 4 10
+Z16 L0 4 10
 R5
 r1
 !s85 0
 31
-R12
+R6
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux2.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux2.v|
 !i113 1
@@ -250,7 +250,7 @@ R7
 R8
 R9
 vmux3
-R10
+R1
 !i10b 1
 !s100 fShz_RzH66YN6G@4dH?@Y3
 R2
@@ -266,7 +266,7 @@ R5
 r1
 !s85 0
 31
-R12
+R6
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux3.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux3.v|
 !i113 1
@@ -274,7 +274,7 @@ R7
 R8
 R9
 vmux4
-R10
+R1
 !i10b 1
 !s100 OIfh4Nh:Z2YPe53OzGl162
 R2
@@ -285,12 +285,12 @@ R14
 8C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux4.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux4.v
 !i122 5
-R15
+R16
 R5
 r1
 !s85 0
 31
-R12
+R6
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux4.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/mux4.v|
 !i113 1
@@ -369,6 +369,30 @@ R12
 R7
 R13
 R9
+vslicer
+R1
+!i10b 1
+!s100 IEml_:D<RW1A]PBi6:7TJ2
+R2
+IX6RG4Nb2^zgEb1Go>gj5J3
+R3
+R0
+w1727100010
+8C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/slicer.v
+FC:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/slicer.v
+!i122 15
+L0 3 20
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/slicer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/components/slicer.v|
+!i113 1
+R7
+R8
+R9
 vt1c_riscv_cpu
 R10
 !i10b 1
@@ -377,7 +401,7 @@ R2
 I<OQh=8hiBjI]Y;1;=Dfe30
 R3
 R0
-w1726985959
+w1727100063
 8C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v
 !i122 0
@@ -394,23 +418,23 @@ R7
 R13
 R9
 vtb
-R1
+R15
 !i10b 1
-!s100 GNSK0`PNJXAV0MzkJdjFL2
+!s100 z>3_WY@`a87C>PO`cl`Yz2
 R2
-ITE>9:6Ka09WU4<]eIJ44C3
+I7BQ3jW_B0L8ocld>=4L=l0
 R3
 R0
-w1726991369
+w1727100474
 8C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test/tb.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test/tb.v
-!i122 16
+!i122 17
 L0 3 532
 R5
 r1
 !s85 0
 31
-R6
+!s108 1727100497.000000
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test/tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test|C:/Users/nawaz/OneDrive/Desktop/programing/quartus/t1c_riscv_cpu/risc-V/.test/tb.v|
 !i113 1

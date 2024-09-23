@@ -16,7 +16,7 @@ module datapath (
 );
 
 wire [31:0] PCNext, PCPlus4, PCTarget, UOut;
-wire [31:0] ImmExt, SrcA, SrcB, WriteData, ALUResult;
+wire [31:0] ImmExt, SrcA, SrcB, WriteData, ALUResult, RDSlice;
 
 // next PC logic
 reset_ff #(32) pcreg(clk, reset, PCNext, PC);
@@ -32,7 +32,10 @@ imm_extend     ext (Instr[31:7], ImmSrc, ImmExt);
 // ALU logic
 mux2 #(32)     srcbmux(WriteData, ImmExt, ALUSrc, SrcB);
 alu            alu (SrcA, SrcB, ALUControl, ALUResult, Zero);
-mux4 #(32)     resultmux(ALUResult, ReadData, PCPlus4, UOut, ResultSrc, Result);
+mux4 #(32)     resultmux(ALUResult, RDSlice, PCPlus4, UOut, ResultSrc, Result);
+
+// RD slicer 
+slicer			rdslicer(ReadData, Instr[14:12], RDSlice);
 
 
 assign Mem_WrData = WriteData;
