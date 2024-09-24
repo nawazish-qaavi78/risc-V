@@ -90,19 +90,19 @@ initial begin
 end
 
 // test the book asm program
-always @(negedge clk) begin
-    # 10;
-    if(MemWrite && !reset) begin
-        if(DataAdr === 100 & WriteData === 25) begin
-            $display("Simulation succeeded");
-            $stop;
-        end
-        else if (DataAdr !== 96) begin
-            $display("Simulation failed");
-            $stop;
-        end
-    end
-end
+//always @(negedge clk) begin
+//    # 10;
+//    if(MemWrite && !reset) begin
+//        if(DataAdr === 100 & WriteData === 25) begin
+//            $display("Simulation succeeded");
+//            $stop;
+//        end
+//        else if (DataAdr !== 96) begin
+//            $display("Simulation failed");
+//            $stop;
+//        end
+//    end
+//end
 
  always @(negedge clk) begin
      case(PC)
@@ -310,7 +310,7 @@ end
              if(MemWrite && !reset) begin
                  if(DataAdr === 33 & WriteData === 1) $display ("23. sb implementation is correct");
                  else begin
-                     $display("23. sb implementation is incorrect, Result = %d", Result);
+                     $display("23. sb implementation is incorrect, DataAdr = %d, WriteData = %d", DataAdr, WriteData);
                      fault_instrs = fault_instrs + 1'b1;
                  end
              end
@@ -322,7 +322,7 @@ end
              if(MemWrite && !reset) begin
                  if(DataAdr === 38 & WriteData === -3) $display ("24. sh implementation is correct");
                  else begin
-                     $display("24. sh implementation is incorrect, Result = %d", Result);
+                     $display("24. sh implementation is incorrect, DataAdr = %d, WriteData = %d", DataAdr, WriteData);
                      fault_instrs = fault_instrs + 1'b1;
                  end
              end
@@ -334,7 +334,7 @@ end
              if(MemWrite && !reset) begin
                  if(DataAdr === 40 & WriteData === 16) $display ("25. sw implementation is correct");
                  else begin
-                     $display("25. sw implementation is incorrect, Result = %d", Result);
+                     $display("25. sw implementation is incorrect, DataAdr = %d, WriteData = %d", DataAdr, WriteData);
                      fault_instrs = fault_instrs + 1'b1;
                  end
              end
@@ -344,7 +344,7 @@ end
              i = i + 1'b1;
              if(DataAdr === 33 & Result === 1 ) $display ("26. lb implementation is correct");
              else begin
-                 $display("26. lb implementation is incorrect, Result = %d", Result);
+                 $display("26. lb implementation is incorrect,  DataAdr = %d, Result = %d", DataAdr, Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -353,7 +353,7 @@ end
              i = i + 1'b1;
              if(DataAdr === 38 & Result === -3 ) $display ("27. lh implementation is correct");
              else begin
-                 $display("27. lh implementation is incorrect, Result = %d", Result);
+                 $display("27. lh implementation is incorrect, DataAdr = %d, Result = %d", DataAdr, Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -362,7 +362,7 @@ end
              i = i + 1'b1;
              if(DataAdr === 40 & Result === 16) $display ("28. lw implementation is correct");
              else begin
-                 $display("28. lw implementation is incorrect, Result = %d", Result);
+                 $display("28. lw implementation is incorrect, DataAdr = %d, Result = %d", DataAdr, Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -371,7 +371,7 @@ end
              i = i + 1'b1;
              if(DataAdr === 33 & Result === 1) $display ("29. lbu implementation is correct");
              else begin
-                 $display("29. lbu implementation is incorrect, Result = %d", Result);
+                 $display("29. lbu implementation is incorrect, DataAdr = %d, Result = %d", DataAdr, Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -380,7 +380,7 @@ end
              i = i + 1'b1;
              if(DataAdr === 38 & Result === 32'h0000FFFD) $display ("30. lhu implementation is correct");
              else begin
-                 $display("30. lhu implementation is incorrect, Result = %d", Result);
+                 $display("30. lhu implementation is incorrect, DataAdr = %d, Result = %d", DataAdr, Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end

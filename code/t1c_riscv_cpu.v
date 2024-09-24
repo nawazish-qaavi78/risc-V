@@ -25,7 +25,8 @@ assign MemWrite  = (Ext_MemWrite && reset) ? 1 : MemWrite_rv32;
 assign WriteData = (Ext_MemWrite && reset) ? Ext_WriteData : WriteData_rv32;
 assign DataAdr   = reset ? Ext_DataAdr : DataAdr_rv32;
 
-//always@(Instr) $display("Instr = %h", Instr);
+//always@(Instr) $display("Instr = %d", Instr);
+
 
 endmodule
 

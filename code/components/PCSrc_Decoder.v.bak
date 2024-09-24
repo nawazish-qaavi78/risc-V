@@ -1,0 +1,43 @@
+
+
+module PCSrc_Decoder (
+	 input  		   Jump,
+	 input 			Brnach,
+    input  [2:0]  funct3,
+    input  [1:0]  flags,
+	 
+    output [1:0] PCSrc,
+
+);
+
+
+wire       Branch;
+wire 		  PCSrc1;
+reg        PCSrc0; // create a module or some shit for this
+
+wire 		  Zero, Carry, Sign , Overflow;
+
+
+
+always@(*) begin
+	if(Jump) PCSrc0 <= 1;
+	else if(Branch)
+		case(funct3)
+			3'b000:  PCSrc0 <= Zero;
+			3'b001:  PCSrc0 <= ~Zero;
+			3'b100:	PCSrc0 <= Sign != Overflow;
+			3'b101:	PCSrc0 <= Sign == Overflow;
+			3'b110:	PCSrc0 <= Carry;
+			3'b111:	PCSrc0 <= ~Carry;
+			default: PCSrc0 <= 0;
+		endcase
+	else PCSrc0 <= 0;
+end
+
+// for jump and branch
+assign PCSrc = {PCSrc1, PCSrc0};
+
+assign {Zero, Carry, Sign , Overflow} = flags;
+
+
+endmodule

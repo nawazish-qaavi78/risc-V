@@ -1,5 +1,5 @@
 
-// imm_extend.v - logic for sign extension
+// slicer.v - logic for read data slicing
 module slicer (
     input  [31:0]     RD,
     input  [ 2:0]     funct3,

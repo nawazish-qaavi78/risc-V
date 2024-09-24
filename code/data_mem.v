@@ -19,5 +19,7 @@ always @(posedge clk) begin
     if (wr_en) data_ram[wr_addr[DATA_WIDTH-1:2] % 64] <= wr_data;
 end
 
+//always@(*) $display("rd_data_mem = %d", rd_data_mem);
+
 endmodule
 

@@ -7,7 +7,7 @@ module datapath (
     input         RegWrite, 
     input [2:0]   ImmSrc,
     input [3:0]   ALUControl,
-    output        Zero,
+    output [3:0]       flags,
     output [31:0] PC,
     input  [31:0] Instr,
     output [31:0] Mem_WrAddr, Mem_WrData,
@@ -31,12 +31,11 @@ imm_extend     ext (Instr[31:7], ImmSrc, ImmExt);
 
 // ALU logic
 mux2 #(32)     srcbmux(WriteData, ImmExt, ALUSrc, SrcB);
-alu            alu (SrcA, SrcB, ALUControl, ALUResult, Zero);
+alu            alu (SrcA, SrcB, ALUControl, ALUResult, flags);
 mux4 #(32)     resultmux(ALUResult, RDSlice, PCPlus4, UOut, ResultSrc, Result);
 
 // RD slicer 
 slicer			rdslicer(ReadData, Instr[14:12], RDSlice);
-
 
 assign Mem_WrData = WriteData;
 assign Mem_WrAddr = ALUResult;

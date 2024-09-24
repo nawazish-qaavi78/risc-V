@@ -20,7 +20,7 @@ always @(*) begin
         7'b0100011: controls = 14'b0_001_1_1_00_0_00_0_x_0; // sw
         7'b0110011: controls = 14'b1_xxx_0_0_00_0_10_0_x_0; // R–type
         7'b1100011: controls = 14'b0_010_0_0_00_1_01_0_x_0; // beq
-        7'b0010011: controls = 14'b1_000_1_0_00_0_10_0_0_0; // I–type ALU
+        7'b0010011: controls = 14'b1_000_1_0_00_0_10_0_x_0; // I–type ALU
         7'b1101111: controls = 14'b1_011_0_0_10_0_00_1_x_0; // jal
 		  
 		  7'b0010111: controls = 14'b1_100_x_0_11_0_xx_0_0_0; // auipc
