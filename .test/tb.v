@@ -98,7 +98,7 @@ end
 //            $stop;
 //        end
 //        else if (DataAdr !== 96) begin
-//            $display("Simulation failed");
+//            $display("Simulation failed, DataAdr = %d", DataAdr);
 //            $stop;
 //        end
 //    end

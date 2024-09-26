@@ -16,14 +16,16 @@ module datapath (
 );
 
 wire [31:0] PCNext, PCPlus4, PCTarget, UOut;
-wire [31:0] ImmExt, SrcA, SrcB, WriteData, ALUResult, RDSlice;
+wire [31:0] ImmExt, SrcA, SrcB, WriteData, ALUResult, RDSlice, WD;
+
 
 // next PC logic
 reset_ff #(32) pcreg(clk, reset, PCNext, PC);
 adder          pcadd4(PC, 32'd4, PCPlus4);
 adder          pcaddbranch(PC, ImmExt, PCTarget);
 mux3 #(32)     pcmux(PCPlus4, PCTarget, ALUResult, PCSrc, PCNext);
-mux2 #(32)		umux(PCTarget, ImmExt, UCtrl, UOut);
+
+mux2 #(32)		umux(PCTarget, ImmExt, Instr[5], UOut);
 
 // register file logic
 reg_file       rf (clk, RegWrite, Instr[19:15], Instr[24:20], Instr[11:7], Result, SrcA, WriteData);
@@ -36,6 +38,7 @@ mux4 #(32)     resultmux(ALUResult, RDSlice, PCPlus4, UOut, ResultSrc, Result);
 
 // RD slicer 
 slicer			rdslicer(ReadData, Instr[14:12], RDSlice);
+
 
 assign Mem_WrData = WriteData;
 assign Mem_WrAddr = ALUResult;

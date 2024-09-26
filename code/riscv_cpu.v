@@ -18,7 +18,7 @@ wire [2:0]  ResultSrc, ImmSrc;
 wire [3:0]  ALUControl;
 
 controller  c   (Instr[6:0], Instr[14:12], Instr[30], flags,
-                ResultSrc, PCSrc, MemWrite,  ALUSrc, UCtrl, RegWrite, Jump,
+                ResultSrc, PCSrc, MemWrite,  ALUSrc, RegWrite, Jump,
                 ImmSrc, ALUControl);
 
 datapath    dp  (clk, reset, ResultSrc, PCSrc,
