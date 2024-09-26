@@ -19,13 +19,11 @@ riscv_cpu rvcpu    (clk, reset, PC, Instr,
                     MemWrite_rv32, DataAdr_rv32,
                     WriteData_rv32, ReadData, Result);
 instr_mem instrmem (PC, Instr);
-data_mem  datamem  (clk, MemWrite, DataAdr, WriteData, ReadData);
+data_mem  datamem  (clk, MemWrite, Instr[14:12],DataAdr, WriteData, ReadData);
 
 assign MemWrite  = (Ext_MemWrite && reset) ? 1 : MemWrite_rv32;
 assign WriteData = (Ext_MemWrite && reset) ? Ext_WriteData : WriteData_rv32;
 assign DataAdr   = reset ? Ext_DataAdr : DataAdr_rv32;
-
-//always@(Instr) $display("Instr = %d", Instr);
 
 
 endmodule

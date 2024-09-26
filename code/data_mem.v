@@ -3,23 +3,66 @@
 
 module data_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 64) (
     input       clk, wr_en,
+	 input 		 [2:0] funct3,
     input       [ADDR_WIDTH-1:0] wr_addr, wr_data,
-    output      [DATA_WIDTH-1:0] rd_data_mem
+    output reg  [DATA_WIDTH-1:0] rd_data_mem
 );
 
 // array of 64 32-bit words or data
 reg [DATA_WIDTH-1:0] data_ram [0:MEM_SIZE-1];
 
+wire [ADDR_WIDTH-1:0] word_addr = wr_addr[DATA_WIDTH-1:2] % 64;
+
 // combinational read logic
 // word-aligned memory access
-assign rd_data_mem = data_ram[wr_addr[DATA_WIDTH-1:2] % 64];
+//assign rd_data_mem = data_ram[word_addr];
 
 // synchronous write logic
 always @(posedge clk) begin
-    if (wr_en) data_ram[wr_addr[DATA_WIDTH-1:2] % 64] <= wr_data;
+    if (wr_en) begin 
+		case(funct3)
+			3'b000: begin // sb
+				case(wr_addr[1:0])
+					2'b00: data_ram[word_addr][ 7:0 ] <= wr_data[7:0];
+					2'b01: data_ram[word_addr][15:8 ] <= wr_data[7:0];
+					2'b10: data_ram[word_addr][23:16] <= wr_data[7:0];
+					2'b11: data_ram[word_addr][31:24] <= wr_data[7:0];
+				endcase
+			end
+			3'b001: case(wr_addr[1]) //sh
+						1'b0: data_ram[word_addr][15: 0] <= wr_data[15:0];
+						1'b1: data_ram[word_addr][31:16] <= wr_data[15:0];
+					  endcase
+			3'b010: data_ram[word_addr] <= wr_data;
+		endcase
+		
+	 end
 end
 
-//always@(*) $display("rd_data_mem = %d", rd_data_mem);
+always @(*) begin
+   case(funct3)
+	   3'b000: case(wr_addr[1:0]) // lb
+					2'b00: rd_data_mem <= {{24{data_ram[word_addr][ 7]}},data_ram[word_addr][7:0]};
+					2'b01: rd_data_mem <= {{24{data_ram[word_addr][15]}},data_ram[word_addr][15:8]};
+					2'b10: rd_data_mem <= {{24{data_ram[word_addr][23]}},data_ram[word_addr][23:16]};
+					2'b11: rd_data_mem <= {{24{data_ram[word_addr][31]}},data_ram[word_addr][31:23]};
+				  endcase
+		3'b001: rd_data_mem <= wr_addr[1] ? {{16{data_ram[word_addr][31]}},data_ram[word_addr][31:16]}:{{16{data_ram[word_addr][15]}},data_ram[word_addr][15:0]}; // lh
+		3'b010: rd_data_mem <= data_ram[word_addr]; // lw
+		
+		3'b100: case(wr_addr[1:0]) // lbu
+					2'b00: rd_data_mem <= {24'b0,data_ram[word_addr][ 7: 0]};
+					2'b01: rd_data_mem <= {24'b0,data_ram[word_addr][15: 8]};
+					2'b10: rd_data_mem <= {24'b0,data_ram[word_addr][23:16]};
+					2'b11: rd_data_mem <= {24'b0,data_ram[word_addr][31:23]};
+				  endcase
+		3'b101: rd_data_mem <= wr_addr[1] ? {16'b0,data_ram[word_addr][31:16]}:{16'b0,data_ram[word_addr][15:0]};//  lhu
+		default: rd_data_mem <= 32'bx;
+	endcase
+end
+
 
 endmodule
+
+
 
