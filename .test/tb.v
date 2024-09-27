@@ -398,7 +398,7 @@ end
              i = i + 1'b1;
              if(Result === 5) $display("31. blt implementation is correct ");
              else begin
-                 $display("31. blt implementation is incorrect, Result = %d", Result);
+                 $display("31. blt implementation is incorrect, Result = %h", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end
@@ -416,7 +416,7 @@ end
              i = i + 1'b1;
              if(Result === -6) $display("32. bge implementation is correct");
              else begin
-                 $display("32. bge implementation is incorrect, Result = %d", Result);
+                 $display("32. bge implementation is incorrect, Result = %h", Result);
                  fault_instrs = fault_instrs + 1'b1;
              end
          end

@@ -25,13 +25,15 @@ end
 // register file write logic (synchronous)
 always @(posedge clk) begin
 	
-    if (wr_en && (wr_addr != 0)) reg_file_arr[wr_addr] <= wr_data;
+    if (wr_en && (wr_addr!=0)) reg_file_arr[wr_addr] <= wr_data;
 
 end
 
 // register file read logic (combinational)
 assign rd_data1 = ( rd_addr1 != 0 ) ? reg_file_arr[rd_addr1] : 0;
 assign rd_data2 = ( rd_addr2 != 0 ) ? reg_file_arr[rd_addr2] : 0;
+
+//always@(*) $display("x6 = %b, x7 = %d", reg_file_arr[6], reg_file_arr[7]);
 
 
 endmodule

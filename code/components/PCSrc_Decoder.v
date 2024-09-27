@@ -30,7 +30,7 @@ always@(*) begin
 	else PCSrc0 <= 0;
 end
 
-assign {Zero, Carry, Sign , Overflow} = flags;
+assign {Zero, Sign, Carry, Overflow} = flags;
 
 assign PCSrc = {PCSrc1, PCSrc0};
 
