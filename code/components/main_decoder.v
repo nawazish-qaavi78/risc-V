@@ -12,6 +12,7 @@ module main_decoder (
 
 reg [12:0] controls;
 
+// additional signals PCSrc1, and additional bit is added to ImmSrc
 always @(*) begin
 	 
     casez (op)

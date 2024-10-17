@@ -13,12 +13,18 @@ reg [DATA_WIDTH-1:0] data_ram [0:MEM_SIZE-1];
 
 wire [ADDR_WIDTH-1:0] word_addr = wr_addr[DATA_WIDTH-1:2] % 64;
 
+wire byte_offset, word_offset;
+
+assign byte_offset = (wr_addr[1:0]<<3);
+assign word_offset = (wr_addr[1]<<4);
+
 // synchronous write logic
 always @(posedge clk) begin
     if (wr_en) begin 
+	 // decoding funct3 to perform right write operation
 		case(funct3)
-			3'b000: data_ram[word_addr][(wr_addr[1:0]*8)+:8] <= wr_data[8:0];//sb
-			3'b001: data_ram[word_addr][(wr_addr[1]*16)+:16] <= wr_data[15:0]; // sh
+			3'b000: data_ram[word_addr][byte_offset+:8] <= wr_data[8:0];//sb
+			3'b001: data_ram[word_addr][word_offset+:16] <= wr_data[15:0]; // sh
 			3'b010: data_ram[word_addr] <= wr_data; // sw
 		endcase
 		
@@ -26,15 +32,17 @@ always @(posedge clk) begin
 end
 
 always @(*) begin
+// decoding funct3 to perform right read operation
    case(funct3)
-	   3'b000: rd_data_mem <= {{24{data_ram[word_addr][ (wr_addr[1:0]*8)+7]}},data_ram[word_addr][(wr_addr[1:0]*8)+:8]}; // lb
-		3'b001: rd_data_mem <= {{16{data_ram[word_addr][(wr_addr[1]*16) + 15]}}, data_ram[word_addr][(wr_addr[1]*16)+:16]}; // lh
+	   3'b000: rd_data_mem <= {{24{data_ram[word_addr][byte_offset+7]}},data_ram[word_addr][byte_offset+:8]}; // lb
+		3'b001: rd_data_mem <= {{16{data_ram[word_addr][word_offset + 15]}}, data_ram[word_addr][word_offset+:16]}; // lh
 		3'b010: rd_data_mem <= data_ram[word_addr]; // lw
-		3'b100: rd_data_mem <= {24'b0,data_ram[word_addr][(wr_addr[1:0]*8)+:8]};//lbu
-		3'b101: rd_data_mem <= {16'b0, data_ram[word_addr][(wr_addr[1]*16)+:16]};//  lhu
+		3'b100: rd_data_mem <= {24'b0,data_ram[word_addr][byte_offset+:8]};//lbu
+		3'b101: rd_data_mem <= {16'b0, data_ram[word_addr][word_offset+:16]};//  lhu
 		default: rd_data_mem <= 32'bx;
 	endcase
 end
+
 
 
 endmodule

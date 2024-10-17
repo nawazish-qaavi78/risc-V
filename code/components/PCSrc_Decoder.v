@@ -15,6 +15,7 @@ reg  PCSrc0;
 
 wire Zero, Carry, Sign , Overflow;
 
+// using the flags to generate the control signal for the PC decoder
 always@(*) begin
 	if(Jump) PCSrc0 <= 1;
 	else if(Branch)
