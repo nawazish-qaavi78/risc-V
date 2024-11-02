@@ -10,8 +10,10 @@ wire MemWrite;
 
 reg [4:0] SP = 0, EP = 0;
 
-localparam BGE_IN   =   32'hAC;
-localparam BGE_OUT  =   32'hB8;
+integer error_count = 0, i = 0;
+integer fw = 0, fd = 0, num_values = 16;
+reg [4:0] register_array [0:15];
+integer value = 0;
 
 integer data_1 = 0, data_2 = 0, data_3, cpu_data = 0;
 reg flag = 0;
