@@ -14,7 +14,8 @@ module riscv_cpu (
 wire        ALUSrc, RegWrite, Jump, UCtrl; 
 wire [3:0]  flags;
 wire [1:0]	PCSrc;
-wire [2:0]  ResultSrc, ImmSrc;
+wire [1:0]  ResultSrc; 
+wire [2:0]  ImmSrc;
 wire [3:0]  ALUControl;
 
 controller  c   (Instr[6:0], Instr[14:12], Instr[30], flags,

@@ -26,5 +26,16 @@ assign WriteData = (Ext_MemWrite && reset) ? Ext_WriteData : WriteData_rv32;
 assign DataAdr   = reset ? Ext_DataAdr : DataAdr_rv32;
 
 
+
+//wire [2:0] MemSel, Store;
+//// data_mem dmem (clk, MemWrite, MemSel, DataAdr, WriteData, ReadData);
+//data_mem dmem (clk, MemWrite, Store, DataAdr, WriteData, ReadData);
+//
+//// output assignments
+//// default sw, lw while reset
+//assign Store = (Ext_MemWrite && reset) ? 3'b010 : MemSel;
+
+
+
 endmodule
 
