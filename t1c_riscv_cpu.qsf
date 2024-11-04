@@ -65,8 +65,7 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb -section_id 
 set_global_assignment -name EDA_TEST_BENCH_NAME tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb -section_id tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id tb
-set_global_assignment -name EDA_TEST_BENCH_FILE .test/tb.v -section_id tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1 s" -section_id tb
 set_global_assignment -name VERILOG_FILE code/t1c_riscv_cpu.v
 set_global_assignment -name VERILOG_FILE code/riscv_cpu.v
 set_global_assignment -name VERILOG_FILE code/instr_mem.v
@@ -85,4 +84,5 @@ set_global_assignment -name VERILOG_FILE code/components/alu.v
 set_global_assignment -name VERILOG_FILE code/components/adder.v
 set_global_assignment -name VERILOG_FILE code/components/slicer.v
 set_global_assignment -name VERILOG_FILE code/components/PCSrc_Decoder.v
+set_global_assignment -name EDA_TEST_BENCH_FILE .test/tb.v -section_id tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

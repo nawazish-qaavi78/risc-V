@@ -13,29 +13,21 @@ module t1c_riscv_cpu (
 wire [31:0] Instr;
 wire [31:0] DataAdr_rv32, WriteData_rv32;
 wire        MemWrite_rv32;
+wire [2:0]  Store, Store_rv32;
 
 // instantiate processor and memories
 riscv_cpu rvcpu    (clk, reset, PC, Instr,
                     MemWrite_rv32, DataAdr_rv32,
                     WriteData_rv32, ReadData, Result);
 instr_mem instrmem (PC, Instr);
-data_mem  datamem  (clk, MemWrite, Instr[14:12],DataAdr, WriteData, ReadData);
+data_mem dmem (clk, MemWrite, Store, DataAdr, WriteData, ReadData);
+//data_mem  datamem  (clk, MemWrite, Instr[14:12],DataAdr, WriteData, ReadData);
 
+assign Store = (Ext_MemWrite && reset) ? 3'b010 : Store_rv32;
 assign MemWrite  = (Ext_MemWrite && reset) ? 1 : MemWrite_rv32;
 assign WriteData = (Ext_MemWrite && reset) ? Ext_WriteData : WriteData_rv32;
 assign DataAdr   = reset ? Ext_DataAdr : DataAdr_rv32;
-
-
-
-//wire [2:0] MemSel, Store;
-//// data_mem dmem (clk, MemWrite, MemSel, DataAdr, WriteData, ReadData);
-//data_mem dmem (clk, MemWrite, Store, DataAdr, WriteData, ReadData);
-//
-//// output assignments
-//// default sw, lw while reset
-//assign Store = (Ext_MemWrite && reset) ? 3'b010 : MemSel;
-
-
+assign Store_rv32 = Instr[14:12];
 
 endmodule
 

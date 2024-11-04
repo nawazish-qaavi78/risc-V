@@ -23,7 +23,7 @@ always @(posedge clk) begin
     if (wr_en) begin 
 	 // decoding funct3 to perform right write operation
 		case(funct3)
-			3'b000: data_ram[word_addr][byte_offset+: 8]  <= wr_data[8:0];//sb
+			3'b000: data_ram[word_addr][byte_offset+: 8]  <= wr_data[7:0];//sb
 			3'b001: data_ram[word_addr][word_offset+:16] <= wr_data[15:0]; // sh
 			3'b010: data_ram[word_addr] <= wr_data; // sw
 		endcase

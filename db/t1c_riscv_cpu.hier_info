@@ -1,6 +1,7 @@
 |t1c_riscv_cpu
 clk => clk.IN2
 reset => reset.IN1
+Ext_MemWrite => Store.IN0
 Ext_MemWrite => MemWrite.IN0
 Ext_WriteData[0] => WriteData.DATAB
 Ext_WriteData[1] => WriteData.DATAB
@@ -2944,7 +2945,7 @@ instr[30] <= instr_ram.DATAOUT30
 instr[31] <= instr_ram.DATAOUT31
 
 
-|t1c_riscv_cpu|data_mem:datamem
+|t1c_riscv_cpu|data_mem:dmem
 clk => data_ram[63][0].CLK
 clk => data_ram[63][1].CLK
 clk => data_ram[63][2].CLK
