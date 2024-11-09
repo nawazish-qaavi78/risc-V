@@ -16,11 +16,8 @@ wire [ADDR_WIDTH-1:0] word_addr = wr_addr[DATA_WIDTH-1:2] % 64;
 wire [4:0] byte_offset;
 wire [3:0] half_word_offset;
 
-assign byte_offset = (wr_addr[1:0] == 2'b00) ? 0 :
-                     (wr_addr[1:0] == 2'b01) ? 8 :
-                     (wr_addr[1:0] == 2'b10) ? 16 : 24;
-							
-assign half_word_offset = (wr_addr[1] == 1'b0) ? 0 : 16;
+assign byte_offset      = wr_addr[1:0]<<3;
+assign half_word_offset = wr_addr[1]<<4;
 
 
 // synchronous write logic
