@@ -1,5 +1,5 @@
 Analysis & Synthesis report for t1c_riscv_cpu
-Sat Nov 09 23:34:27 2024
+Mon Nov 11 16:40:01 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -58,13 +58,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 09 23:34:26 2024       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 11 16:40:01 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; t1c_riscv_cpu                               ;
 ; Top-level Entity Name              ; t1c_riscv_cpu                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 9,536                                       ;
-;     Total combinational functions  ; 6,717                                       ;
+; Total logic elements               ; 9,533                                       ;
+;     Total combinational functions  ; 6,714                                       ;
 ;     Dedicated logic registers      ; 3,104                                       ;
 ; Total registers                    ; 3104                                        ;
 ; Total pins                         ; 228                                         ;
@@ -211,16 +211,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 9,536     ;
+; Estimated Total logic elements              ; 9,533     ;
 ;                                             ;           ;
-; Total combinational functions               ; 6717      ;
+; Total combinational functions               ; 6714      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 5906      ;
-;     -- 3 input functions                    ; 676       ;
-;     -- <=2 input functions                  ; 135       ;
+;     -- 4 input functions                    ; 5886      ;
+;     -- 3 input functions                    ; 689       ;
+;     -- <=2 input functions                  ; 139       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 6532      ;
+;     -- normal mode                          ; 6529      ;
 ;     -- arithmetic mode                      ; 185       ;
 ;                                             ;           ;
 ; Total registers                             ; 3104      ;
@@ -233,7 +233,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 3104      ;
-; Total fan-out                               ; 35492     ;
+; Total fan-out                               ; 35459     ;
 ; Average fan-out                             ; 3.45      ;
 +---------------------------------------------+-----------+
 
@@ -243,24 +243,24 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Entity Name   ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+---------------+--------------+
-; |t1c_riscv_cpu                  ; 6717 (73)           ; 3104 (0)                  ; 0           ; 0            ; 0       ; 0         ; 228  ; 0            ; |t1c_riscv_cpu                                                   ; t1c_riscv_cpu ; work         ;
-;    |data_mem:dmem|              ; 3495 (3495)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|data_mem:dmem                                     ; data_mem      ; work         ;
-;    |instr_mem:instrmem|         ; 669 (669)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|instr_mem:instrmem                                ; instr_mem     ; work         ;
-;    |riscv_cpu:rvcpu|            ; 2480 (0)            ; 1056 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu                                   ; riscv_cpu     ; work         ;
-;       |controller:c|            ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c                      ; controller    ; work         ;
-;          |PCSrc_Decoder:PCSrcD| ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|PCSrc_Decoder:PCSrcD ; PCSrc_Decoder ; work         ;
+; |t1c_riscv_cpu                  ; 6714 (71)           ; 3104 (0)                  ; 0           ; 0            ; 0       ; 0         ; 228  ; 0            ; |t1c_riscv_cpu                                                   ; t1c_riscv_cpu ; work         ;
+;    |data_mem:dmem|              ; 3494 (3494)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|data_mem:dmem                                     ; data_mem      ; work         ;
+;    |instr_mem:instrmem|         ; 670 (670)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|instr_mem:instrmem                                ; instr_mem     ; work         ;
+;    |riscv_cpu:rvcpu|            ; 2479 (0)            ; 1056 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu                                   ; riscv_cpu     ; work         ;
+;       |controller:c|            ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c                      ; controller    ; work         ;
+;          |PCSrc_Decoder:PCSrcD| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|PCSrc_Decoder:PCSrcD ; PCSrc_Decoder ; work         ;
 ;          |alu_decoder:ad|       ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|alu_decoder:ad       ; alu_decoder   ; work         ;
 ;          |main_decoder:md|      ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|main_decoder:md      ; main_decoder  ; work         ;
 ;       |datapath:dp|             ; 2446 (0)            ; 1056 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp                       ; datapath      ; work         ;
 ;          |adder:pcadd4|         ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|adder:pcadd4          ; adder         ; work         ;
 ;          |adder:pcaddbranch|    ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|adder:pcaddbranch     ; adder         ; work         ;
-;          |alu:alu|              ; 737 (737)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu               ; alu           ; work         ;
+;          |alu:alu|              ; 738 (738)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu               ; alu           ; work         ;
 ;          |imm_extend:ext|       ; 38 (38)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext        ; imm_extend    ; work         ;
 ;          |mux2:srcbmux|         ; 55 (55)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux2:srcbmux          ; mux2          ; work         ;
 ;          |mux3:pcmux|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux3:pcmux            ; mux3          ; work         ;
 ;          |mux4:resultmux|       ; 100 (100)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux4:resultmux        ; mux4          ; work         ;
 ;          |reg_file:rf|          ; 1420 (1420)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reg_file:rf           ; reg_file      ; work         ;
-;          |reset_ff:pcreg|       ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg        ; reset_ff      ; work         ;
+;          |reset_ff:pcreg|       ; 31 (31)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg        ; reset_ff      ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -703,18 +703,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 2880                        ;
 ;     ENA CLR           ; 2                           ;
 ;     plain             ; 192                         ;
-; cycloneiii_lcell_comb ; 6717                        ;
+; cycloneiii_lcell_comb ; 6714                        ;
 ;     arith             ; 185                         ;
 ;         2 data inputs ; 30                          ;
 ;         3 data inputs ; 155                         ;
-;     normal            ; 6532                        ;
+;     normal            ; 6529                        ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 104                         ;
-;         3 data inputs ; 521                         ;
-;         4 data inputs ; 5906                        ;
+;         2 data inputs ; 108                         ;
+;         3 data inputs ; 534                         ;
+;         4 data inputs ; 5886                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 46.00                       ;
-; Average LUT depth     ; 30.65                       ;
+; Max LUT depth         ; 45.00                       ;
+; Average LUT depth     ; 30.21                       ;
 +-----------------------+-----------------------------+
 
 
@@ -723,7 +723,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:40     ;
+; Top            ; 00:00:41     ;
 +----------------+--------------+
 
 
@@ -733,7 +733,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Nov 09 23:33:39 2024
+    Info: Processing started: Mon Nov 11 16:39:12 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off t1c_riscv_cpu -c t1c_riscv_cpu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -774,7 +774,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file code/co
 Info (12021): Found 1 design units, including 1 entities, in source file code/components/pcsrc_decoder.v
     Info (12023): Found entity 1: PCSrc_Decoder File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/PCSrc_Decoder.v Line: 3
 Info (12127): Elaborating entity "t1c_riscv_cpu" for the top level hierarchy
-Info (12128): Elaborating entity "riscv_cpu" for hierarchy "riscv_cpu:rvcpu" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 23
+Info (12128): Elaborating entity "riscv_cpu" for hierarchy "riscv_cpu:rvcpu" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 21
 Info (12128): Elaborating entity "controller" for hierarchy "riscv_cpu:rvcpu|controller:c" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/riscv_cpu.v Line: 23
 Info (12128): Elaborating entity "main_decoder" for hierarchy "riscv_cpu:rvcpu|controller:c|main_decoder:md" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/controller.v Line: 23
 Info (12128): Elaborating entity "alu_decoder" for hierarchy "riscv_cpu:rvcpu|controller:c|alu_decoder:ad" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/controller.v Line: 25
@@ -788,12 +788,12 @@ Info (12128): Elaborating entity "reg_file" for hierarchy "riscv_cpu:rvcpu|datap
 Info (12128): Elaborating entity "imm_extend" for hierarchy "riscv_cpu:rvcpu|datapath:dp|imm_extend:ext" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 32
 Info (12128): Elaborating entity "alu" for hierarchy "riscv_cpu:rvcpu|datapath:dp|alu:alu" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 36
 Info (12128): Elaborating entity "mux4" for hierarchy "riscv_cpu:rvcpu|datapath:dp|mux4:resultmux" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/datapath.v Line: 37
-Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:instrmem" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 24
+Info (12128): Elaborating entity "instr_mem" for hierarchy "instr_mem:instrmem" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 22
 Warning (10850): Verilog HDL warning at instr_mem.v(15): number of words (256) in memory file does not match the number of elements in the address range [0:511] File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/instr_mem.v Line: 15
 Warning (10030): Net "instr_ram.data_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/instr_mem.v Line: 10
 Warning (10030): Net "instr_ram.waddr_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/instr_mem.v Line: 10
 Warning (10030): Net "instr_ram.we_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/instr_mem.v Line: 10
-Info (12128): Elaborating entity "data_mem" for hierarchy "data_mem:dmem" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 25
+Info (12128): Elaborating entity "data_mem" for hierarchy "data_mem:dmem" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 23
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr" is uninferred due to asynchronous read logic File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/reg_file.v Line: 16
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/db/t1c_riscv_cpu.ram0_instr_mem_8ff0214b.hdl.mif" contains "don't care" values -- overwriting them with 0s
@@ -801,15 +801,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/output_files/t1c_riscv_cpu.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9825 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9822 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 161 output pins
-    Info (21061): Implemented 9597 logic cells
+    Info (21061): Implemented 9594 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Sat Nov 09 23:34:27 2024
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Peak virtual memory: 4825 megabytes
+    Info: Processing ended: Mon Nov 11 16:40:01 2024
+    Info: Elapsed time: 00:00:49
+    Info: Total CPU time (on all processors): 00:00:37
 
 
 +------------------------------------------+

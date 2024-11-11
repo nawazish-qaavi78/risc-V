@@ -11,7 +11,7 @@ module data_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 64) (
 // array of 64 32-bit words or data
 reg [DATA_WIDTH-1:0] data_ram [0:MEM_SIZE-1];
 
-wire [ADDR_WIDTH-1:0] word_addr = wr_addr[DATA_WIDTH-1:2] % 64;
+wire [ADDR_WIDTH-1:0] word_addr = wr_addr[DATA_WIDTH-1:2] % MEM_SIZE;
 
 wire [4:0] byte_offset;
 wire [3:0] half_word_offset;

@@ -52,6 +52,7 @@ SYMBOL TABLE:
 02000000 g       .bss	00000000 __bss_end
 00000000 g       *ABS*	00000000 __tbss_size
 00000374 g     F .text	00000008 _set_tls
+00000196  w      .debug_info	00000000 .hidden path_planner.c.6b9a5783
 00000000 g     F .init	00000000 _start
 02000000 g       *ABS*	00000000 __ram
 02000000 g       .bss	00000000 __data_end
@@ -63,7 +64,6 @@ SYMBOL TABLE:
 02000040 g       .init	00000000 __stack
 00000000 g     F *ABS*	00000000 vfscanf
 000003c0 g       *ABS*	00000000 __data_source
-00000196  w      .debug_info	00000000 .hidden path_planner.c.13a52680
 00000000 g       *ABS*	00000000 __flash
 02000000 g       .data	00000000 __data_start
 00000000 g     F *ABS*	00000000 vfprintf
@@ -231,7 +231,7 @@ Disassembly of section .text:
      ###     #endif
      ### 
      ###     set_graph(graph);
-     ###     processed = 0;
+     ###     processed         = 0;
  184:	                         0e072023          	sw	x0,224(x14)
      ###     cost[START_POINT] = 0;
  188:	                         00074683          	lbu	x13,0(x14)
@@ -266,26 +266,26 @@ Disassembly of section .text:
      ###         if((!(processed & (1<<i))) && (cost[i]<min)) {
  1c4:	               |  /----> 00c89533          	sll	x10,x17,x12
  1c8:	               |  |      00657533          	and	x10,x10,x6
- 1cc:	               |  |  /-- 00051e63          	bne	x10,x0,1e8 <path_planner.c.13a52680+0x52>
+ 1cc:	               |  |  /-- 00051e63          	bne	x10,x0,1e8 <path_planner.c.6b9a5783+0x52>
  1d0:	               |  |  |   00c68533          	add	x10,x13,x12
  1d4:	               |  |  |   09054503          	lbu	x10,144(x10)
- 1d8:	               |  |  +-- 01057863          	bgeu	x10,x16,1e8 <path_planner.c.13a52680+0x52>
+ 1d8:	               |  |  +-- 01057863          	bgeu	x10,x16,1e8 <path_planner.c.6b9a5783+0x52>
      ###                 index = i;
  1dc:	               |  |  |   01861713          	slli	x14,x12,0x18
  1e0:	               |  |  |   41875713          	srai	x14,x14,0x18
  1e4:	               |  |  |   00050813          	addi	x16,x10,0
      ###     for(uint8_t i = 0; i<V; i++){
  1e8:	               |  |  \-> 00160613          	addi	x12,x12,1
- 1ec:	               |  \----- fdc61ce3          	bne	x12,x28,1c4 <path_planner.c.13a52680+0x2e>
+ 1ec:	               |  \----- fdc61ce3          	bne	x12,x28,1c4 <path_planner.c.6b9a5783+0x2e>
      ###         if(parent_index>=0){
- 1f0:	               |  /----- 05e71863          	bne	x14,x30,240 <path_planner.c.13a52680+0xaa>
+ 1f0:	               |  /----- 05e71863          	bne	x14,x30,240 <path_planner.c.6b9a5783+0xaa>
      ###     for(uint8_t j = 0; j<V; j++){
  1f4:	         /-----|--|----> fff58593          	addi	x11,x11,-1
  1f8:	         |     |  |      0ff5f593          	andi	x11,x11,255
- 1fc:	         |     \--|----- fa059ce3          	bne	x11,x0,1b4 <path_planner.c.13a52680+0x1e>
-     ### 
-     ###     // path_planned[idx-1] = END_POINT;
-     ###     // for(int8_t i = idx-2; i>=0;path_planned[i] = parent[path_planned[i+1]], i--);
+ 1fc:	         |     \--|----- fa059ce3          	bne	x11,x0,1b4 <path_planner.c.6b9a5783+0x1e>
+     ###         }
+     ###         
+     ###     }
      ### 
      ###     // decoding the output and backtracking
      ###     int8_t temp = END_POINT;
@@ -303,10 +303,10 @@ Disassembly of section .text:
      ###         temp = parent[temp];
  21c:	         |  |     |      0b068813          	addi	x16,x13,176 # 20000b0 <__stack+0x70>
      ###     while (temp != -1 && idx < 16) {
- 220:	   /-----|--|-----|--/-X 00a78863          	beq	x15,x10,230 <path_planner.c.13a52680+0x9a>
+ 220:	   /-----|--|-----|--/-X 00a78863          	beq	x15,x10,230 <path_planner.c.6b9a5783+0x9a>
  224:	   |     |  |     |  |   0e46c703          	lbu	x14,228(x13)
  228:	   |     |  |     |  |   0ff77713          	andi	x14,x14,255
- 22c:	   |  /--|--|-----|--|-- 08e5fa63          	bgeu	x11,x14,2c0 <path_planner.c.13a52680+0x12a>
+ 22c:	   |  /--|--|-----|--|-- 08e5fa63          	bgeu	x11,x14,2c0 <path_planner.c.6b9a5783+0x12a>
      ###     }
      ### 
      ###     // Reverse path_planned to get the correct path from START_POINT to END_POINT
@@ -315,7 +315,7 @@ Disassembly of section .text:
      ###     while (temp != -1 && idx < 16) {
  234:	   |  |  |  |     |      00000713          	addi	x14,x0,0
  238:	   |  |  |  |     |      0d068593          	addi	x11,x13,208 # 20000d0 <__stack+0x90>
- 23c:	/--|--|--|--|-----|----- 0ec0006f          	jal	x0,328 <path_planner.c.13a52680+0x192>
+ 23c:	/--|--|--|--|-----|----- 0ec0006f          	jal	x0,328 <path_planner.c.6b9a5783+0x192>
      ###                 if((graph[parent_index] & (1<<index)) && (cost[index] > cost[parent_index] + 1)){
  240:	|  |  |  |  |     \----> 00271313          	slli	x6,x14,0x2
  244:	|  |  |  |  |            00678333          	add	x6,x15,x6
@@ -325,10 +325,10 @@ Disassembly of section .text:
  254:	|  |  |  |  |        |   00c89533          	sll	x10,x17,x12
  258:	|  |  |  |  |        |   0ff67813          	andi	x16,x12,255
  25c:	|  |  |  |  |        |   01d57533          	and	x10,x10,x29
- 260:	|  |  |  |  |     /--|-- 02051863          	bne	x10,x0,290 <path_planner.c.13a52680+0xfa>
+ 260:	|  |  |  |  |     /--|-- 02051863          	bne	x10,x0,290 <path_planner.c.6b9a5783+0xfa>
      ###             for(index = 0; index<V; index++){
  264:	|  |  |  |  |  /--|--|-> 00160613          	addi	x12,x12,1
- 268:	|  |  |  |  |  |  |  \-- ffc614e3          	bne	x12,x28,250 <path_planner.c.13a52680+0xba>
+ 268:	|  |  |  |  |  |  |  \-- ffc614e3          	bne	x12,x28,250 <path_planner.c.6b9a5783+0xba>
  26c:	|  |  |  |  |  |  |      02000813          	addi	x16,x0,32
      ###             processed = processed | (1<<parent_index);
  270:	|  |  |  |  |  |  |  /-> 0e06a603          	lw	x12,224(x13)
@@ -338,14 +338,14 @@ Disassembly of section .text:
      ###             if(index == END_POINT) break;
  280:	|  |  |  |  |  |  |  |   0046c703          	lbu	x14,4(x13)
  284:	|  |  |  |  |  |  |  |   0ff77713          	andi	x14,x14,255
- 288:	|  |  |  \--|--|--|--|-- f6e816e3          	bne	x16,x14,1f4 <path_planner.c.13a52680+0x5e>
- 28c:	|  |  |     \--|--|--|-- f75ff06f          	jal	x0,200 <path_planner.c.13a52680+0x6a>
+ 288:	|  |  |  \--|--|--|--|-- f6e816e3          	bne	x16,x14,1f4 <path_planner.c.6b9a5783+0x5e>
+ 28c:	|  |  |     \--|--|--|-- f75ff06f          	jal	x0,200 <path_planner.c.6b9a5783+0x6a>
      ###                 if((graph[parent_index] & (1<<index)) && (cost[index] > cost[parent_index] + 1)){
  290:	|  |  |        |  \--|-> 0902c503          	lbu	x10,144(x5)
  294:	|  |  |        |     |   01f60eb3          	add	x29,x12,x31
  298:	|  |  |        |     |   000ec383          	lbu	x7,0(x29)
  29c:	|  |  |        |     |   00150513          	addi	x10,x10,1
- 2a0:	|  |  |        +-----|-- fc7552e3          	bge	x10,x7,264 <path_planner.c.13a52680+0xce>
+ 2a0:	|  |  |        +-----|-- fc7552e3          	bge	x10,x7,264 <path_planner.c.6b9a5783+0xce>
      ###                         cost[index] = cost[parent_index] + 1;
  2a4:	|  |  |        |     |   00ae8023          	sb	x10,0(x29)
      ###                         parent[index] = parent_index;
@@ -354,8 +354,8 @@ Disassembly of section .text:
      ###                         if(index == END_POINT) break; // considering all of equal weight edges
  2b0:	|  |  |        |     |   0046c503          	lbu	x10,4(x13)
  2b4:	|  |  |        |     |   0ff57513          	andi	x10,x10,255
- 2b8:	|  |  |        \-----|-- fb0516e3          	bne	x10,x16,264 <path_planner.c.13a52680+0xce>
- 2bc:	|  |  |              \-- fb5ff06f          	jal	x0,270 <path_planner.c.13a52680+0xda>
+ 2b8:	|  |  |        \-----|-- fb0516e3          	bne	x10,x16,264 <path_planner.c.6b9a5783+0xce>
+ 2bc:	|  |  |              \-- fb5ff06f          	jal	x0,270 <path_planner.c.6b9a5783+0xda>
      ###         path_planned[idx++] = temp;
  2c0:	|  |  \----------------> 0e46c703          	lbu	x14,228(x13)
  2c4:	|  |                     0ff77713          	andi	x14,x14,255
@@ -367,7 +367,7 @@ Disassembly of section .text:
      ###         temp = parent[temp];
  2dc:	|  |                     010787b3          	add	x15,x15,x16
  2e0:	|  |                     00078783          	lb	x15,0(x15)
- 2e4:	|  \-------------------- f3dff06f          	jal	x0,220 <path_planner.c.13a52680+0x8a>
+ 2e4:	|  \-------------------- f3dff06f          	jal	x0,220 <path_planner.c.6b9a5783+0x8a>
      ###         int8_t temp_swap = path_planned[i];
      ###         path_planned[i] = path_planned[idx - 1 - i];
  2e8:	|                    /-> 0e46c783          	lbu	x15,228(x13)
@@ -394,7 +394,7 @@ Disassembly of section .text:
  32c:	                     |   0ff77613          	andi	x12,x14,255
  330:	                     |   0ff7f793          	andi	x15,x15,255
  334:	                     |   0017d793          	srli	x15,x15,0x1
- 338:	                     \-- faf668e3          	bltu	x12,x15,2e8 <path_planner.c.13a52680+0x152>
+ 338:	                     \-- faf668e3          	bltu	x12,x15,2e8 <path_planner.c.6b9a5783+0x152>
      ### 
      ### 
      ###     // ##############################################
@@ -405,7 +405,7 @@ Disassembly of section .text:
  340:	                         020007b7          	lui	x15,0x2000
  344:	                  /----> 0e47c683          	lbu	x13,228(x15) # 20000e4 <__stack+0xa4>
  348:	                  |      0ff6f693          	andi	x13,x13,255
- 34c:	                  |  /-- 00d74a63          	blt	x14,x13,360 <path_planner.c.13a52680+0x1ca>
+ 34c:	                  |  /-- 00d74a63          	blt	x14,x13,360 <path_planner.c.6b9a5783+0x1ca>
      ###         NODE_POINT = path_planned[i];
      ###     }
      ###     // Path Planning Computation Done Flag
@@ -427,7 +427,7 @@ Disassembly of section .text:
      ###         NODE_POINT = path_planned[i];
  36c:	                  |      00d78423          	sb	x13,8(x15)
      ###     for (int i = 0; i < idx; ++i) {
- 370:	                  \----- fd5ff06f          	jal	x0,344 <path_planner.c.13a52680+0x1ae>
+ 370:	                  \----- fd5ff06f          	jal	x0,344 <path_planner.c.6b9a5783+0x1ae>
 
 00000374 <_set_tls>:
  374:	00050213          	addi	x4,x10,0
