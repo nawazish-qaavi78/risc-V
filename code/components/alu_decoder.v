@@ -26,10 +26,7 @@ always @(*) begin
 					 
 					 3'b011:  ALUControl = 4'b1001; // less than
 					 3'b100:  ALUControl = 4'b0100; // xor 
-					 3'b101:  begin
-							if  (funct7b5) ALUControl = 4'b0111;
-							else ALUControl = 4'b0110;
-					 end
+					 3'b101:  ALUControl = funct7b5 ? 4'b0111 : 4'b0110;
 					 
                 3'b110:  ALUControl = 4'b0011; // or, ori
                 3'b111:  ALUControl = 4'b0010; // and, andi

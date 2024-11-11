@@ -17,12 +17,17 @@ module datapath (
 
 wire [31:0] PCNext, PCPlus4, PCTarget, UOut;
 wire [31:0] ImmExt, SrcA, SrcB, WriteData, ALUResult;
+wire [31:0] PCadd_result;
 
 
 // next PC logic
 reset_ff #(32) pcreg(clk, reset, PCNext, PC);
-adder          pcadd4(PC, 32'd4, PCPlus4);
-adder          pcaddbranch(PC, ImmExt, PCTarget);
+
+adder 			pcadd(PC, (PCSrc[0]?32'd4:ImmExt), PCadd_result);
+assign PCPlus4 = (PCSrc[0] == 0) ? PCadd_result : 32'b0;
+assign PCTarget = (PCSrc[0] == 1) ? PCadd_result : 32'b0;
+
+
 mux3 #(32)     pcmux(PCPlus4, PCTarget, ALUResult, PCSrc, PCNext);
 
 mux2 #(32)		umux(PCTarget, ImmExt, Instr[5], UOut);

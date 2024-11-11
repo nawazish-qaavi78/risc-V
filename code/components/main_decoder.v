@@ -32,9 +32,9 @@ always @(*) begin
 end
 
 
-assign PCSrc1 = (op == 7'b1100111);
-assign Jump = (op == 7'b1101111);
-assign Branch = (op  == 7'b1100011);
+assign PCSrc1	 = (op == 7'b1100111);
+assign Jump		 = (op == 7'b1101111);
+assign Branch 	 = (op == 7'b1100011);
 assign MemWrite = (op == 7'b0100011);
 
 assign {RegWrite, ImmSrc, ALUSrc, ResultSrc, ALUOp} = controls;
