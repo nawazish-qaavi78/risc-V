@@ -101,11 +101,11 @@ Disassembly of section .text:
      ###         uint8_t idx;
      ###     #else
      ###         uint8_t  *path_planned = (uint8_t *)  0x020000D0;
-     ###         #define idx  (* (volatile uint8_t * ) 0x020000E4) 
+     ###         #define idx  (* (volatile uint8_t * ) 0x020000DC) 
      ###     #endif
      ###     idx = 0;
   54:	                         020007b7          	lui	x15,0x2000
-     ###         #define processed   (* (volatile uint32_t * ) 0x020000E0) 
+     ###         #define processed   (* (volatile uint32_t * ) 0x020000D8) 
      ###         uint32_t *graph   = (uint32_t *) 0x02000010;
      ###         uint8_t  *cost    = (uint8_t *)  0x02000090; 
      ###         int8_t   *parent  = (int8_t *)   0x020000B0; 
@@ -113,7 +113,7 @@ Disassembly of section .text:
      ###         for (uint8_t i = 0; i < V; i++) {
   58:	                         02000737          	lui	x14,0x2000
      ###     idx = 0;
-  5c:	                         0e078223          	sb	x0,228(x15) # 20000e4 <__stack+0xa4>
+  5c:	                         0c078e23          	sb	x0,220(x15) # 20000dc <__stack+0x9c>
      ###             cost[i] = UINT8_MAX;
   60:	                         fff00693          	addi	x13,x0,-1
      ###     idx = 0;
@@ -232,7 +232,7 @@ Disassembly of section .text:
      ### 
      ###     set_graph(graph);
      ###     processed         = 0;
- 184:	                         0e072023          	sw	x0,224(x14)
+ 184:	                         0c072c23          	sw	x0,216(x14)
      ###     cost[START_POINT] = 0;
  188:	                         00074683          	lbu	x13,0(x14)
      ###     graph[ 0] = 0b00000000000000000000010001000010;
@@ -257,7 +257,7 @@ Disassembly of section .text:
  1ac:	                         02000e13          	addi	x28,x0,32
  1b0:	                         09068f93          	addi	x31,x13,144 # 2000090 <__stack+0x50>
      ###         int8_t  parent_index = min_cost(cost, processed);
- 1b4:	               /-------> 0e06a303          	lw	x6,224(x13)
+ 1b4:	               /-------> 0d86a303          	lw	x6,216(x13)
  1b8:	               |         00000613          	addi	x12,x0,0
      ###     int8_t  index =        -1;
  1bc:	               |         fff00713          	addi	x14,x0,-1
@@ -304,7 +304,7 @@ Disassembly of section .text:
  21c:	         |  |     |      0b068813          	addi	x16,x13,176 # 20000b0 <__stack+0x70>
      ###     while (temp != -1 && idx < 16) {
  220:	   /-----|--|-----|--/-X 00a78863          	beq	x15,x10,230 <path_planner.c.6b9a5783+0x9a>
- 224:	   |     |  |     |  |   0e46c703          	lbu	x14,228(x13)
+ 224:	   |     |  |     |  |   0dc6c703          	lbu	x14,220(x13)
  228:	   |     |  |     |  |   0ff77713          	andi	x14,x14,255
  22c:	   |  /--|--|-----|--|-- 08e5fa63          	bgeu	x11,x14,2c0 <path_planner.c.6b9a5783+0x12a>
      ###     }
@@ -331,10 +331,10 @@ Disassembly of section .text:
  268:	|  |  |  |  |  |  |  \-- ffc614e3          	bne	x12,x28,250 <path_planner.c.6b9a5783+0xba>
  26c:	|  |  |  |  |  |  |      02000813          	addi	x16,x0,32
      ###             processed = processed | (1<<parent_index);
- 270:	|  |  |  |  |  |  |  /-> 0e06a603          	lw	x12,224(x13)
+ 270:	|  |  |  |  |  |  |  /-> 0d86a603          	lw	x12,216(x13)
  274:	|  |  |  |  |  |  |  |   00e89733          	sll	x14,x17,x14
  278:	|  |  |  |  |  |  |  |   00c76733          	or	x14,x14,x12
- 27c:	|  |  |  |  |  |  |  |   0ee6a023          	sw	x14,224(x13)
+ 27c:	|  |  |  |  |  |  |  |   0ce6ac23          	sw	x14,216(x13)
      ###             if(index == END_POINT) break;
  280:	|  |  |  |  |  |  |  |   0046c703          	lbu	x14,4(x13)
  284:	|  |  |  |  |  |  |  |   0ff77713          	andi	x14,x14,255
@@ -357,11 +357,11 @@ Disassembly of section .text:
  2b8:	|  |  |        \-----|-- fb0516e3          	bne	x10,x16,264 <path_planner.c.6b9a5783+0xce>
  2bc:	|  |  |              \-- fb5ff06f          	jal	x0,270 <path_planner.c.6b9a5783+0xda>
      ###         path_planned[idx++] = temp;
- 2c0:	|  |  \----------------> 0e46c703          	lbu	x14,228(x13)
+ 2c0:	|  |  \----------------> 0dc6c703          	lbu	x14,220(x13)
  2c4:	|  |                     0ff77713          	andi	x14,x14,255
  2c8:	|  |                     00170613          	addi	x12,x14,1
  2cc:	|  |                     0ff67613          	andi	x12,x12,255
- 2d0:	|  |                     0ec68223          	sb	x12,228(x13)
+ 2d0:	|  |                     0cc68e23          	sb	x12,220(x13)
  2d4:	|  |                     00e68733          	add	x14,x13,x14
  2d8:	|  |                     0cf70823          	sb	x15,208(x14)
      ###         temp = parent[temp];
@@ -370,7 +370,7 @@ Disassembly of section .text:
  2e4:	|  \-------------------- f3dff06f          	jal	x0,220 <path_planner.c.6b9a5783+0x8a>
      ###         int8_t temp_swap = path_planned[i];
      ###         path_planned[i] = path_planned[idx - 1 - i];
- 2e8:	|                    /-> 0e46c783          	lbu	x15,228(x13)
+ 2e8:	|                    /-> 0dc6c783          	lbu	x15,220(x13)
  2ec:	|                    |   00b70633          	add	x12,x14,x11
      ###         int8_t temp_swap = path_planned[i];
  2f0:	|                    |   00064503          	lbu	x10,0(x12)
@@ -382,7 +382,7 @@ Disassembly of section .text:
  304:	|                    |   0d07c783          	lbu	x15,208(x15)
  308:	|                    |   00f60023          	sb	x15,0(x12)
      ###         path_planned[idx - 1 - i] = temp_swap;
- 30c:	|                    |   0e46c783          	lbu	x15,228(x13)
+ 30c:	|                    |   0dc6c783          	lbu	x15,220(x13)
  310:	|                    |   0ff7f793          	andi	x15,x15,255
  314:	|                    |   fff78793          	addi	x15,x15,-1
  318:	|                    |   40e787b3          	sub	x15,x15,x14
@@ -390,7 +390,7 @@ Disassembly of section .text:
  320:	|                    |   0ca78823          	sb	x10,208(x15)
      ###     for (uint8_t i = 0; i < idx / 2; i++) {
  324:	|                    |   00170713          	addi	x14,x14,1
- 328:	\--------------------|-> 0e46c783          	lbu	x15,228(x13)
+ 328:	\--------------------|-> 0dc6c783          	lbu	x15,220(x13)
  32c:	                     |   0ff77613          	andi	x12,x14,255
  330:	                     |   0ff7f793          	andi	x15,x15,255
  334:	                     |   0017d793          	srli	x15,x15,0x1
@@ -403,7 +403,7 @@ Disassembly of section .text:
      ###     for (int i = 0; i < idx; ++i) {
  33c:	                         00000713          	addi	x14,x0,0
  340:	                         020007b7          	lui	x15,0x2000
- 344:	                  /----> 0e47c683          	lbu	x13,228(x15) # 20000e4 <__stack+0xa4>
+ 344:	                  /----> 0dc7c683          	lbu	x13,220(x15) # 20000dc <__stack+0x9c>
  348:	                  |      0ff6f693          	andi	x13,x13,255
  34c:	                  |  /-- 00d74a63          	blt	x14,x13,360 <path_planner.c.6b9a5783+0x1ca>
      ###         NODE_POINT = path_planned[i];

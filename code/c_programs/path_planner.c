@@ -127,12 +127,12 @@ int main(int argc, char const *argv[]) {
 
     #ifdef __linux__
         // array to store the planned path
-        uint8_t path_planned[16];
+        uint8_t path_planned[8];
         // index to keep track of the path_planned array
         uint8_t idx;
     #else
         uint8_t  *path_planned = (uint8_t *)  0x020000D0;
-        #define idx  (* (volatile uint8_t * ) 0x020000E4) 
+        #define idx  (* (volatile uint8_t * ) 0x020000DC) 
     #endif
     idx = 0;
 
@@ -144,7 +144,7 @@ int main(int argc, char const *argv[]) {
         int8_t   parent[V] =  {[0 ... (V-1)] = -1};
         uint32_t processed;
     #else
-        #define processed   (* (volatile uint32_t * ) 0x020000E0) 
+        #define processed   (* (volatile uint32_t * ) 0x020000D8) 
         uint32_t *graph   = (uint32_t *) 0x02000010;
         uint8_t  *cost    = (uint8_t *)  0x02000090; 
         int8_t   *parent  = (int8_t *)   0x020000B0; 
