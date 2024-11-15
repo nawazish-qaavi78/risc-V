@@ -1,4 +1,3 @@
-
 // main_decoder.v - logic for main decoder
 
 module main_decoder (
@@ -10,35 +9,28 @@ module main_decoder (
     output [1:0] ALUOp
 );
 
-reg [8:0] controls;
+reg [12:0] controls;
 
 // additional signals PCSrc1, and additional bit is added to ImmSrc
 always @(*) begin
 	 
     casez (op)
-        // RegWrite_ImmSrc_ALUSrc_MemWrite_ResultSrc_ALUOp
-        7'b0000011: controls = 9'b1_000_1_01_00; // lw
-        7'b0100011: controls = 9'b0_001_1_00_00; // sw
-        7'b0110011: controls = 9'b1_xxx_0_00_10; // R–type
-        7'b1100011: controls = 9'b0_010_0_00_01; // beq
-        7'b0010011: controls = 9'b1_000_1_00_10; // I–type ALU
-        7'b1101111: controls = 9'b1_011_0_10_00; // jal
+        // RegWrite_ImmSrc_ALUSrc_MemWrite_ResultSrc_Branch_ALUOp_Jump_PCSrc1
+        7'b00000??: controls = 13'b1_000_1_0_01_0_00_0_0; // lw
+        7'b01000??: controls = 13'b0_001_1_1_00_0_00_0_0; // sw
+        7'b01100??: controls = 13'b1_xxx_0_0_00_0_10_0_0; // R–type
+        7'b11000??: controls = 13'b0_010_0_0_00_1_01_0_0; // beq
+        7'b00100??: controls = 13'b1_000_1_0_00_0_10_0_0; // I–type ALU
+        7'b???1???: controls = 13'b1_011_0_0_10_0_00_1_0; // jal
 		  
-		  7'b0?10111: controls = 9'b1_100_x_11_xx; // auipc, lui
-		  7'b1100111: controls = 9'b1_000_1_10_00; // jalr
+		  7'b0?101??: controls = 13'b1_100_x_0_11_0_xx_0_0; // auipc, lui
+		  7'b11001??: controls = 13'b1_000_1_0_10_0_00_0_1; // jalr
 		  
-        default:    controls = 9'bx_xxx_x_xx_xx; // ???
+        default:    controls = 13'bx_xxx_x_x_xx_x_xx_x_x; // ???
     endcase
 end
 
-
-assign PCSrc1	 = (op == 7'b1100111);
-assign Jump		 = (op == 7'b1101111);
-assign Branch 	 = (op == 7'b1100011);
-assign MemWrite = (op == 7'b0100011);
-
-assign {RegWrite, ImmSrc, ALUSrc, ResultSrc, ALUOp} = controls;
+assign {RegWrite, ImmSrc, ALUSrc, MemWrite, ResultSrc, Branch, ALUOp, Jump, PCSrc1} = controls;
 
 
 endmodule
-
