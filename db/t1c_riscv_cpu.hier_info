@@ -513,25 +513,31 @@ ALUOp[1] <= controls.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|alu_decoder:ad
-opb5 => always0.IN0
+opb5 => ALUControl.IN0
 funct3[0] => Decoder0.IN1
 funct3[0] => Decoder1.IN2
-funct3[0] => Mux0.IN9
+funct3[0] => Mux1.IN9
 funct3[1] => Decoder1.IN1
-funct3[1] => Mux0.IN8
+funct3[1] => Mux1.IN8
 funct3[2] => Decoder0.IN0
 funct3[2] => Decoder1.IN0
-funct3[2] => Mux0.IN7
-funct7b5 => always0.IN1
-funct7b5 => Mux0.IN10
-ALUOp[0] => Equal0.IN3
-ALUOp[0] => Equal1.IN3
-ALUOp[1] => Equal0.IN2
-ALUOp[1] => Equal1.IN2
-ALUControl[0] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
-ALUControl[1] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
-ALUControl[2] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
-ALUControl[3] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
+funct3[2] => Mux1.IN7
+funct7b5 => ALUControl.IN1
+funct7b5 => Mux1.IN10
+ALUOp[0] => Mux0.IN5
+ALUOp[0] => Mux2.IN5
+ALUOp[0] => Mux3.IN5
+ALUOp[0] => Mux4.IN5
+ALUOp[0] => Mux5.IN5
+ALUOp[1] => Mux0.IN4
+ALUOp[1] => Mux2.IN4
+ALUOp[1] => Mux3.IN4
+ALUOp[1] => Mux4.IN4
+ALUOp[1] => Mux5.IN4
+ALUControl[0] <= ALUControl[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALUControl[1] <= ALUControl[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALUControl[2] <= ALUControl[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ALUControl[3] <= ALUControl[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|PCSrc_Decoder:PCSrcD
