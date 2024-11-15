@@ -1,5 +1,5 @@
 Analysis & Synthesis report for t1c_riscv_cpu
-Thu Nov 14 23:44:51 2024
+Sat Nov 16 00:04:19 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -58,13 +58,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 14 23:44:51 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 16 00:04:19 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; t1c_riscv_cpu                               ;
 ; Top-level Entity Name              ; t1c_riscv_cpu                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 9,541                                       ;
-;     Total combinational functions  ; 6,722                                       ;
+; Total logic elements               ; 9,114                                       ;
+;     Total combinational functions  ; 6,106                                       ;
 ;     Dedicated logic registers      ; 3,104                                       ;
 ; Total registers                    ; 3104                                        ;
 ; Total pins                         ; 228                                         ;
@@ -211,16 +211,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 9,541     ;
+; Estimated Total logic elements              ; 9,114     ;
 ;                                             ;           ;
-; Total combinational functions               ; 6722      ;
+; Total combinational functions               ; 6106      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 5905      ;
-;     -- 3 input functions                    ; 683       ;
-;     -- <=2 input functions                  ; 134       ;
+;     -- 4 input functions                    ; 5490      ;
+;     -- 3 input functions                    ; 519       ;
+;     -- <=2 input functions                  ; 97        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 6537      ;
+;     -- normal mode                          ; 5921      ;
 ;     -- arithmetic mode                      ; 185       ;
 ;                                             ;           ;
 ; Total registers                             ; 3104      ;
@@ -233,8 +233,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 3104      ;
-; Total fan-out                               ; 35507     ;
-; Average fan-out                             ; 3.45      ;
+; Total fan-out                               ; 33473     ;
+; Average fan-out                             ; 3.46      ;
 +---------------------------------------------+-----------+
 
 
@@ -243,23 +243,23 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Entity Name   ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+---------------+--------------+
-; |t1c_riscv_cpu                  ; 6722 (71)           ; 3104 (0)                  ; 0           ; 0            ; 0       ; 0         ; 228  ; 0            ; |t1c_riscv_cpu                                                   ; t1c_riscv_cpu ; work         ;
-;    |data_mem:dmem|              ; 3494 (3494)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|data_mem:dmem                                     ; data_mem      ; work         ;
-;    |instr_mem:instrmem|         ; 668 (668)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|instr_mem:instrmem                                ; instr_mem     ; work         ;
-;    |riscv_cpu:rvcpu|            ; 2489 (0)            ; 1056 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu                                   ; riscv_cpu     ; work         ;
-;       |controller:c|            ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c                      ; controller    ; work         ;
-;          |PCSrc_Decoder:PCSrcD| ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|PCSrc_Decoder:PCSrcD ; PCSrc_Decoder ; work         ;
-;          |alu_decoder:ad|       ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|alu_decoder:ad       ; alu_decoder   ; work         ;
+; |t1c_riscv_cpu                  ; 6106 (72)           ; 3104 (0)                  ; 0           ; 0            ; 0       ; 0         ; 228  ; 0            ; |t1c_riscv_cpu                                                   ; t1c_riscv_cpu ; work         ;
+;    |data_mem:dmem|              ; 2889 (2889)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|data_mem:dmem                                     ; data_mem      ; work         ;
+;    |instr_mem:instrmem|         ; 666 (666)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|instr_mem:instrmem                                ; instr_mem     ; work         ;
+;    |riscv_cpu:rvcpu|            ; 2479 (0)            ; 1056 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu                                   ; riscv_cpu     ; work         ;
+;       |controller:c|            ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c                      ; controller    ; work         ;
+;          |PCSrc_Decoder:PCSrcD| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|PCSrc_Decoder:PCSrcD ; PCSrc_Decoder ; work         ;
+;          |alu_decoder:ad|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|alu_decoder:ad       ; alu_decoder   ; work         ;
 ;          |main_decoder:md|      ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|controller:c|main_decoder:md      ; main_decoder  ; work         ;
-;       |datapath:dp|             ; 2455 (0)            ; 1056 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp                       ; datapath      ; work         ;
+;       |datapath:dp|             ; 2449 (0)            ; 1056 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp                       ; datapath      ; work         ;
 ;          |adder:pcadd4|         ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|adder:pcadd4          ; adder         ; work         ;
 ;          |adder:pcaddbranch|    ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|adder:pcaddbranch     ; adder         ; work         ;
-;          |alu:alu|              ; 743 (743)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu               ; alu           ; work         ;
-;          |imm_extend:ext|       ; 38 (38)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext        ; imm_extend    ; work         ;
-;          |mux2:srcbmux|         ; 55 (55)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux2:srcbmux          ; mux2          ; work         ;
+;          |alu:alu|              ; 737 (737)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu               ; alu           ; work         ;
+;          |imm_extend:ext|       ; 40 (40)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext        ; imm_extend    ; work         ;
+;          |mux2:srcbmux|         ; 54 (54)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux2:srcbmux          ; mux2          ; work         ;
 ;          |mux3:pcmux|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux3:pcmux            ; mux3          ; work         ;
 ;          |mux4:resultmux|       ; 100 (100)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux4:resultmux        ; mux4          ; work         ;
-;          |reg_file:rf|          ; 1423 (1423)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reg_file:rf           ; reg_file      ; work         ;
+;          |reg_file:rf|          ; 1422 (1422)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reg_file:rf           ; reg_file      ; work         ;
 ;          |reset_ff:pcreg|       ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg        ; reset_ff      ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -275,7 +275,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 30    ;
 ; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2882  ;
+; Number of registers using Clock Enable       ; 3074  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -285,276 +285,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[1]  ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[19] ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[63][13]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[62][11]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[61][8]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[60][9]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[59][9]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[58][9]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[57][9]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[56][13]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[55][14]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[54][9]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[53][9]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[52][10]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[51][14]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[50][10]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[49][10]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[48][10]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[47][10]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[46][8]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[45][12]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[44][10]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[43][10]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[42][14]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[41][14]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[40][12]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[39][11]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[38][13]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[37][14]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[36][12]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[35][13]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[34][12]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[33][10]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[32][8]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[31][9]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[30][9]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[29][11]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[28][10]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[27][13]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[26][9]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[25][14]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[24][8]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[23][8]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[22][14]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[21][10]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[20][9]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[19][8]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[18][8]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[17][13]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[16][12]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[15][11]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[14][14]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[13][13]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[12][13]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[11][13]                   ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[10][8]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[9][12]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[8][12]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[7][12]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[6][12]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[5][12]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[4][8]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[3][9]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[2][10]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[1][8]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[0][12]                    ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[63][21]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[62][19]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[61][18]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[60][20]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[59][18]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[58][18]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[57][18]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[56][18]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[55][18]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[54][16]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[53][16]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[52][22]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[51][16]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[50][22]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[49][22]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[48][20]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[47][18]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[46][20]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[45][20]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[44][20]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[43][21]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[42][21]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[41][21]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[40][17]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[39][20]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[38][19]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[37][22]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[36][22]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[35][17]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[34][19]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[33][16]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[32][17]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[31][17]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[30][19]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[29][19]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[28][18]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[27][22]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[26][20]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[25][19]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[24][16]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[23][16]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[22][18]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[21][16]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[20][22]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[19][21]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[18][19]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[17][16]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[16][18]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[15][21]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[14][19]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[13][19]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[12][17]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[11][21]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[10][16]                   ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[9][18]                    ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[8][16]                    ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[7][19]                    ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[6][17]                    ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[5][22]                    ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[4][21]                    ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[3][18]                    ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[2][22]                    ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[1][16]                    ;
-; 11:1               ; 7 bits    ; 49 LEs        ; 7 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[0][22]                    ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[63][29]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[62][31]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[61][30]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[60][28]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[59][28]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[58][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[57][30]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[56][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[55][30]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[54][28]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[53][30]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[52][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[51][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[50][31]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[49][27]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[48][31]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[47][28]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[46][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[45][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[44][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[43][27]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[42][31]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[41][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[40][24]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[39][31]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[38][31]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[37][28]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[36][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[35][24]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[34][27]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[33][27]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[32][27]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[31][28]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[30][27]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[29][25]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[28][28]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[27][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[26][29]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[25][25]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[24][31]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[23][31]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[22][29]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[21][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[20][27]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[19][25]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[18][31]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[17][28]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[16][30]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[15][30]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[14][24]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[13][30]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[12][24]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[11][26]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[10][30]                   ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[9][30]                    ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[8][24]                    ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[7][26]                    ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[6][27]                    ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[5][24]                    ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[4][28]                    ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[3][24]                    ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[2][26]                    ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[1][31]                    ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[0][25]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[63][7]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[62][1]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[61][5]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[60][1]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[59][2]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[58][1]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[57][1]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[56][6]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[55][3]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[54][3]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[53][2]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[52][2]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[51][6]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[50][2]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[49][2]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[48][1]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[47][4]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[46][4]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[45][5]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[44][4]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[43][4]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[42][4]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[41][4]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[40][1]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[39][6]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[38][2]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[37][5]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[36][5]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[35][7]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[34][1]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[33][1]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[32][5]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[31][4]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[30][4]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[29][6]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[28][5]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[27][2]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[26][6]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[25][4]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[24][5]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[23][3]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[22][3]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[21][6]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[20][1]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[19][7]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[18][7]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[17][5]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[16][1]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[15][7]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[14][6]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[13][3]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[12][1]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[11][7]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[10][6]                    ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[9][2]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[8][1]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[7][7]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[6][5]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[5][2]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[4][2]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[3][2]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[2][2]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[1][2]                     ;
-; 10:1               ; 7 bits    ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |t1c_riscv_cpu|data_mem:dmem|data_ram[0][7]                     ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux4:resultmux|y[0]  ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext|Mux5  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext|Mux12 ;
-; 19:1               ; 8 bits    ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux17        ;
-; 20:1               ; 7 bits    ; 91 LEs        ; 49 LEs               ; 42 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux14        ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 24 LEs               ; 28 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux27        ;
-; 21:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux7         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[0]  ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|reset_ff:pcreg|q[6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |t1c_riscv_cpu|data_mem:dmem|Mux5                               ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|mux4:resultmux|y[31] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext|Mux7  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |t1c_riscv_cpu|data_mem:dmem|Mux41                              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|imm_extend:ext|Mux10 ;
+; 19:1               ; 8 bits    ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux21        ;
+; 20:1               ; 7 bits    ; 91 LEs        ; 49 LEs               ; 42 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux13        ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 24 LEs               ; 28 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux25        ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux6         ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |t1c_riscv_cpu|data_mem:dmem|Mux54                              ;
 ; 21:1               ; 2 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux28        ;
 ; 22:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; No         ; |t1c_riscv_cpu|riscv_cpu:rvcpu|datapath:dp|alu:alu|Mux3         ;
-; 65:1               ; 16 bits   ; 688 LEs       ; 688 LEs              ; 0 LEs                  ; No         ; |t1c_riscv_cpu|data_mem:dmem|Mux3781                            ;
-; 65:1               ; 7 bits    ; 301 LEs       ; 301 LEs              ; 0 LEs                  ; No         ; |t1c_riscv_cpu|data_mem:dmem|Mux3787                            ;
-; 320:1              ; 7 bits    ; 1491 LEs      ; 1190 LEs             ; 301 LEs                ; No         ; |t1c_riscv_cpu|data_mem:dmem|Mux3795                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
@@ -700,21 +444,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 228                         ;
 ; cycloneiii_ff         ; 3104                        ;
 ;     CLR SLD           ; 30                          ;
-;     ENA               ; 2880                        ;
+;     ENA               ; 3072                        ;
 ;     ENA CLR           ; 2                           ;
-;     plain             ; 192                         ;
-; cycloneiii_lcell_comb ; 6722                        ;
+; cycloneiii_lcell_comb ; 6106                        ;
 ;     arith             ; 185                         ;
 ;         2 data inputs ; 30                          ;
 ;         3 data inputs ; 155                         ;
-;     normal            ; 6537                        ;
+;     normal            ; 5921                        ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 103                         ;
-;         3 data inputs ; 528                         ;
-;         4 data inputs ; 5905                        ;
+;         2 data inputs ; 66                          ;
+;         3 data inputs ; 364                         ;
+;         4 data inputs ; 5490                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 45.00                       ;
-; Average LUT depth     ; 30.20                       ;
+; Max LUT depth         ; 34.00                       ;
+; Average LUT depth     ; 24.20                       ;
 +-----------------------+-----------------------------+
 
 
@@ -723,7 +466,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:42     ;
+; Top            ; 00:00:21     ;
 +----------------+--------------+
 
 
@@ -733,7 +476,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 14 23:44:00 2024
+    Info: Processing started: Sat Nov 16 00:03:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off t1c_riscv_cpu -c t1c_riscv_cpu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -794,22 +537,23 @@ Warning (10030): Net "instr_ram.data_a" at instr_mem.v(10) has no driver or init
 Warning (10030): Net "instr_ram.waddr_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/instr_mem.v Line: 10
 Warning (10030): Net "instr_ram.we_a" at instr_mem.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/instr_mem.v Line: 10
 Info (12128): Elaborating entity "data_mem" for hierarchy "data_mem:dmem" File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v Line: 23
-Info (276014): Found 1 instances of uninferred RAM logic
+Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "riscv_cpu:rvcpu|datapath:dp|reg_file:rf|reg_file_arr" is uninferred due to asynchronous read logic File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/reg_file.v Line: 16
+    Info (276007): RAM logic "data_mem:dmem|data_ram" is uninferred due to asynchronous read logic File: C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v Line: 12
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/db/t1c_riscv_cpu.ram0_instr_mem_8ff0214b.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/output_files/t1c_riscv_cpu.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9830 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9406 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 161 output pins
-    Info (21061): Implemented 9602 logic cells
+    Info (21061): Implemented 9178 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4824 megabytes
-    Info: Processing ended: Thu Nov 14 23:44:51 2024
-    Info: Elapsed time: 00:00:51
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 4808 megabytes
+    Info: Processing ended: Sat Nov 16 00:04:19 2024
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +------------------------------------------+

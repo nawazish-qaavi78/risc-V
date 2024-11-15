@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/simulation/modelsim
 vadder
-Z1 !s110 1731608126
+Z1 !s110 1731695677
 !i10b 1
 !s100 jXE67fZjiCj2W4l?`i:H?0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1731608126.000000
+Z6 !s108 1731695677.000000
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/adder.v|
 !i113 1
@@ -106,23 +106,23 @@ R7
 R8
 R9
 vdata_mem
-Z10 !s110 1731608125
+Z10 !s110 1731695676
 !i10b 1
-!s100 =Q1gG2Jc[lf9AILzRJJm01
+!s100 ;:3=kWi>Cb`h8Ffz4X6Sj0
 R2
-IebIjeeif9TkYQ=][g@fUV0
+IZc[oJBeY5Xfe`?CZ1BHnP2
 R3
 R0
-w1731312814
+w1731695608
 8C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v
 !i122 2
-L0 4 48
+L0 4 90
 R5
 r1
 !s85 0
 31
-Z11 !s108 1731608125.000000
+Z11 !s108 1731695676.000000
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v|
 !i113 1
