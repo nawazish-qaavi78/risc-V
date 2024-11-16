@@ -168,12 +168,10 @@ int main(int argc, char const *argv[]) {
                 if((graph[parent_index] & (1<<index)) && (cost[index] > cost[parent_index] + 1)){
                         cost[index] = cost[parent_index] + 1;
                         parent[index] = parent_index;
-                        if(index == END_POINT) break; // considering all of equal weight edges
                 }
             }
 
             processed = processed | (1<<parent_index);
-            if(index == END_POINT) break;
         }
         
     }

@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/simulation/modelsim
 vadder
-Z1 !s110 1731760025
+Z1 !s110 1731763888
 !i10b 1
 !s100 jXE67fZjiCj2W4l?`i:H?0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1731760025.000000
+Z6 !s108 1731763888.000000
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/adder.v|
 !i113 1
@@ -36,16 +36,16 @@ Z9 tCvgOpt 0
 valu
 R1
 !i10b 1
-!s100 Yon?[DPzlMR^[282NjTS33
+!s100 OMVg65n4eO;gGZ[7EbH^J1
 R2
-I6S5Iz3JK6E^Q3XXKgl0[n2
+IB8QW^AV^6:]<FzzR>4Cdi3
 R3
 R0
-w1731741227
+w1731763408
 8C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/alu.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/alu.v
 !i122 13
-L0 3 39
+L0 3 37
 R5
 r1
 !s85 0
@@ -106,14 +106,14 @@ R7
 R8
 R9
 vdata_mem
-Z10 !s110 1731760024
+Z10 !s110 1731763887
 !i10b 1
-!s100 0CBlXcQL_idDSDK;;H@8g3
+!s100 ;:3=kWi>Cb`h8Ffz4X6Sj0
 R2
-I1VR7[PoTB=`40M`@QIWC53
+IZc[oJBeY5Xfe`?CZ1BHnP2
 R3
 R0
-w1731759971
+w1731762770
 8C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v
 !i122 2
@@ -122,7 +122,7 @@ R5
 r1
 !s85 0
 31
-Z11 !s108 1731760024.000000
+Z11 !s108 1731763887.000000
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v|
 !i113 1
@@ -178,7 +178,7 @@ R7
 R8
 R9
 vinstr_mem
-R1
+Z13 !s110 1731763889
 !i10b 1
 !s100 zQO>IoQJP`bHnSLdF5j362
 R2
@@ -194,7 +194,7 @@ R5
 r1
 !s85 0
 31
-R6
+Z14 !s108 1731763889.000000
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/instr_mem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/instr_mem.v|
 !i113 1
@@ -202,7 +202,7 @@ R7
 R12
 R9
 vmain_decoder
-R10
+R1
 !i10b 1
 !s100 DX9?C@zgBXHA3lQ6S^zIo1
 R2
@@ -218,7 +218,7 @@ R5
 r1
 !s85 0
 31
-R11
+R6
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/main_decoder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/main_decoder.v|
 !i113 1
@@ -226,7 +226,7 @@ R7
 R8
 R9
 vmux2
-R10
+R1
 !i10b 1
 !s100 ifK8COc02]NDN7DP`BU<[1
 R2
@@ -237,12 +237,12 @@ R4
 8C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/mux2.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/mux2.v
 !i122 7
-Z13 L0 4 10
+Z15 L0 4 10
 R5
 r1
 !s85 0
 31
-R11
+R6
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/mux2.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/mux2.v|
 !i113 1
@@ -250,7 +250,7 @@ R7
 R8
 R9
 vmux3
-R10
+R1
 !i10b 1
 !s100 fShz_RzH66YN6G@4dH?@Y3
 R2
@@ -266,7 +266,7 @@ R5
 r1
 !s85 0
 31
-R11
+R6
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/mux3.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/mux3.v|
 !i113 1
@@ -285,7 +285,7 @@ R4
 8C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/mux4.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/mux4.v
 !i122 5
-R13
+R15
 R5
 r1
 !s85 0
@@ -298,14 +298,14 @@ R7
 R8
 R9
 vPCSrc_Decoder
-R1
+R13
 !i10b 1
 !s100 di3;=@m_FY[5aLKKRf_L03
 R2
 IlD`dl04j]^:eI<h2S[QTR1
 R3
 R0
-w1731741618
+w1731760896
 8C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/PCSrc_Decoder.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/PCSrc_Decoder.v
 !i122 15
@@ -314,7 +314,7 @@ R5
 r1
 !s85 0
 31
-R6
+R14
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/PCSrc_Decoder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/PCSrc_Decoder.v|
 !i113 1
@@ -402,7 +402,7 @@ R2
 I4iM@FT1X;3`kf@=9C<LJE2
 R3
 R0
-w1731175535
+w1731761476
 8C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/t1c_riscv_cpu.v
 !i122 0
@@ -419,7 +419,7 @@ R7
 R12
 R9
 vtb
-R1
+R13
 !i10b 1
 !s100 ;6bC0bEjDTgH2BIVT7hPh1
 R2
@@ -435,7 +435,7 @@ R5
 r1
 !s85 0
 31
-R6
+R14
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/.test/tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/.test|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/.test/tb.v|
 !i113 1

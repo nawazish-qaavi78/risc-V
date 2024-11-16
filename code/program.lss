@@ -46,24 +46,24 @@ SYMBOL TABLE:
 02000800 g       .data	00000000 __global_pointer$
 02000000 g       .bss	00000000 __tls_base
 00000400 g       *ABS*	00000000 __flash_size
+00000196  w      .debug_info	00000000 .hidden path_planner.c.78b7007c
 00000008 g       *ABS*	00000000 __stack_size
 00000000 g       *ABS*	00000000 __bss_size
-0000037c g     F .text	00000024 memcpy
+00000354 g     F .text	00000024 memcpy
 02000000 g       .bss	00000000 __bss_end
 00000000 g       *ABS*	00000000 __tbss_size
-00000374 g     F .text	00000008 _set_tls
-00000196  w      .debug_info	00000000 .hidden path_planner.c.6b9a5783
+0000034c g     F .text	00000008 _set_tls
 00000000 g     F .init	00000000 _start
 02000000 g       *ABS*	00000000 __ram
 02000000 g       .bss	00000000 __data_end
-000003bc g       .text	00000000 __text_end
+00000394 g       .text	00000000 __text_end
 02000000 g       .bss	00000000 __bss_start
-000003a0 g     F .text	0000001c memset
-00000054 g     F .text	00000320 main
+00000378 g     F .text	0000001c memset
+00000054 g     F .text	000002f8 main
 00000040 g       *ABS*	00000000 __ram_size
 02000040 g       .init	00000000 __stack
 00000000 g     F *ABS*	00000000 vfscanf
-000003c0 g       *ABS*	00000000 __data_source
+00000398 g       *ABS*	00000000 __data_source
 00000000 g       *ABS*	00000000 __flash
 02000000 g       .data	00000000 __data_start
 00000000 g     F *ABS*	00000000 vfprintf
@@ -79,17 +79,17 @@ Disassembly of section .init:
    c:	    7f818193          	addi	x3,x3,2040 # 2000800 <__global_pointer$>
   10:	    02000517          	auipc	x10,0x2000
   14:	    ff050513          	addi	x10,x10,-16 # 2000000 <__bss_end>
-  18:	    3c000593          	addi	x11,x0,960
+  18:	    39800593          	addi	x11,x0,920
   1c:	    00000613          	addi	x12,x0,0
-  20:	    35c000ef          	jal	x1,37c <memcpy>
+  20:	    334000ef          	jal	x1,354 <memcpy>
   24:	    02000517          	auipc	x10,0x2000
   28:	    fdc50513          	addi	x10,x10,-36 # 2000000 <__bss_end>
   2c:	    00000593          	addi	x11,x0,0
   30:	    00000613          	addi	x12,x0,0
-  34:	    36c000ef          	jal	x1,3a0 <memset>
+  34:	    344000ef          	jal	x1,378 <memset>
   38:	    02000517          	auipc	x10,0x2000
   3c:	    fc850513          	addi	x10,x10,-56 # 2000000 <__bss_end>
-  40:	    334000ef          	jal	x1,374 <_set_tls>
+  40:	    30c000ef          	jal	x1,34c <_set_tls>
   44:	    00000513          	addi	x10,x0,0
   48:	    00000593          	addi	x11,x0,0
   4c:	    008000ef          	jal	x1,54 <main>
@@ -104,355 +104,346 @@ Disassembly of section .text:
      ###         #define idx  (* (volatile uint8_t * ) 0x020000DC) 
      ###     #endif
      ###     idx = 0;
-  54:	                         020007b7          	lui	x15,0x2000
+  54:	             020007b7          	lui	x15,0x2000
      ###         #define processed   (* (volatile uint32_t * ) 0x020000D8) 
      ###         uint32_t *graph   = (uint32_t *) 0x02000010;
      ###         uint8_t  *cost    = (uint8_t *)  0x02000090; 
      ###         int8_t   *parent  = (int8_t *)   0x020000B0; 
      ### 
      ###         for (uint8_t i = 0; i < V; i++) {
-  58:	                         02000737          	lui	x14,0x2000
+  58:	             02000737          	lui	x14,0x2000
      ###     idx = 0;
-  5c:	                         0c078e23          	sb	x0,220(x15) # 20000dc <__stack+0x9c>
+  5c:	             0c078e23          	sb	x0,220(x15) # 20000dc <__stack+0x9c>
      ###             cost[i] = UINT8_MAX;
-  60:	                         fff00693          	addi	x13,x0,-1
+  60:	             fff00693          	addi	x13,x0,-1
      ###     idx = 0;
-  64:	                         09078793          	addi	x15,x15,144
+  64:	             09078793          	addi	x15,x15,144
      ###         for (uint8_t i = 0; i < V; i++) {
-  68:	                         0b070613          	addi	x12,x14,176 # 20000b0 <__stack+0x70>
+  68:	             0b070613          	addi	x12,x14,176 # 20000b0 <__stack+0x70>
      ###             cost[i] = UINT8_MAX;
-  6c:	                     /-> 00d78023          	sb	x13,0(x15)
+  6c:	         /-> 00d78023          	sb	x13,0(x15)
      ###             parent[i] = -1;
-  70:	                     |   02d78023          	sb	x13,32(x15)
+  70:	         |   02d78023          	sb	x13,32(x15)
      ###         for (uint8_t i = 0; i < V; i++) {
-  74:	                     |   00178793          	addi	x15,x15,1
-  78:	                     \-- fec79ae3          	bne	x15,x12,6c <main+0x18>
+  74:	         |   00178793          	addi	x15,x15,1
+  78:	         \-- fec79ae3          	bne	x15,x12,6c <main+0x18>
      ###     graph[ 0] = 0b00000000000000000000010001000010;
-  7c:	                         44200693          	addi	x13,x0,1090
+  7c:	             44200693          	addi	x13,x0,1090
      ###     graph[ 1] = 0b00000000000000000000100000000101;
-  80:	                         00001637          	lui	x12,0x1
+  80:	             00001637          	lui	x12,0x1
      ###     graph[ 0] = 0b00000000000000000000010001000010;
-  84:	                         00d72823          	sw	x13,16(x14)
+  84:	             00d72823          	sw	x13,16(x14)
      ###     graph[ 1] = 0b00000000000000000000100000000101;
-  88:	                         80560693          	addi	x13,x12,-2043 # 805 <__flash_size+0x405>
-  8c:	                         00d72a23          	sw	x13,20(x14)
+  88:	             80560693          	addi	x13,x12,-2043 # 805 <__flash_size+0x405>
+  8c:	             00d72a23          	sw	x13,20(x14)
      ###     graph[ 2] = 0b00000000000000000000000000111010;
-  90:	                         03a00693          	addi	x13,x0,58
-  94:	                         00d72c23          	sw	x13,24(x14)
+  90:	             03a00693          	addi	x13,x0,58
+  94:	             00d72c23          	sw	x13,24(x14)
      ###     graph[ 3] = 0b00000000000000000000000000000100;
-  98:	                         00400693          	addi	x13,x0,4
-  9c:	                         00d72e23          	sw	x13,28(x14)
+  98:	             00400693          	addi	x13,x0,4
+  9c:	             00d72e23          	sw	x13,28(x14)
      ###     graph[ 4] = 0b00000000000000000000000000000100;
-  a0:	                         02d72023          	sw	x13,32(x14)
+  a0:	             02d72023          	sw	x13,32(x14)
      ###     graph[ 5] = 0b00000000000000000000000000000100;
-  a4:	                         02d72223          	sw	x13,36(x14)
+  a4:	             02d72223          	sw	x13,36(x14)
      ###     graph[ 6] = 0b00000000000000000000001110000001;
-  a8:	                         38100693          	addi	x13,x0,897
-  ac:	                         02d72423          	sw	x13,40(x14)
+  a8:	             38100693          	addi	x13,x0,897
+  ac:	             02d72423          	sw	x13,40(x14)
      ###     graph[ 7] = 0b00000000000000000000000001000000;
-  b0:	                         04000693          	addi	x13,x0,64
-  b4:	                         02d72623          	sw	x13,44(x14)
+  b0:	             04000693          	addi	x13,x0,64
+  b4:	             02d72623          	sw	x13,44(x14)
      ###     graph[ 8] = 0b00000000000000000000000001000000;
-  b8:	                         02d72823          	sw	x13,48(x14)
+  b8:	             02d72823          	sw	x13,48(x14)
      ###     graph[ 9] = 0b00000000000000000000000001000000;
-  bc:	                         02d72a23          	sw	x13,52(x14)
+  bc:	             02d72a23          	sw	x13,52(x14)
      ###     graph[10] = 0b00000101000000000000100000000001;
-  c0:	                         050016b7          	lui	x13,0x5001
-  c4:	                         80168693          	addi	x13,x13,-2047 # 5000801 <__global_pointer$+0x3000001>
-  c8:	                         02d72c23          	sw	x13,56(x14)
+  c0:	             050016b7          	lui	x13,0x5001
+  c4:	             80168693          	addi	x13,x13,-2047 # 5000801 <__global_pointer$+0x3000001>
+  c8:	             02d72c23          	sw	x13,56(x14)
      ###     graph[11] = 0b00000000000010000001010000000010;
-  cc:	                         000816b7          	lui	x13,0x81
-  d0:	                         40268693          	addi	x13,x13,1026 # 81402 <__flash_size+0x81002>
-  d4:	                         02d72e23          	sw	x13,60(x14)
+  cc:	             000816b7          	lui	x13,0x81
+  d0:	             40268693          	addi	x13,x13,1026 # 81402 <__flash_size+0x81002>
+  d4:	             02d72e23          	sw	x13,60(x14)
      ###     graph[12] = 0b00000000000000000110100000000000;
-  d8:	                         000076b7          	lui	x13,0x7
-  dc:	                         80068693          	addi	x13,x13,-2048 # 6800 <__flash_size+0x6400>
-  e0:	                         04d72023          	sw	x13,64(x14)
+  d8:	             000076b7          	lui	x13,0x7
+  dc:	             80068693          	addi	x13,x13,-2048 # 6800 <__flash_size+0x6400>
+  e0:	             04d72023          	sw	x13,64(x14)
      ###     graph[14] = 0b00000000000000011001000000000000;
-  e4:	                         000196b7          	lui	x13,0x19
-  e8:	                         04d72423          	sw	x13,72(x14)
+  e4:	             000196b7          	lui	x13,0x19
+  e8:	             04d72423          	sw	x13,72(x14)
      ###     graph[15] = 0b00000000000000000100000000000000;
-  ec:	                         000046b7          	lui	x13,0x4
-  f0:	                         04d72623          	sw	x13,76(x14)
+  ec:	             000046b7          	lui	x13,0x4
+  f0:	             04d72623          	sw	x13,76(x14)
      ###     graph[16] = 0b00000000000001100100000000000000;
-  f4:	                         000646b7          	lui	x13,0x64
-  f8:	                         04d72823          	sw	x13,80(x14)
+  f4:	             000646b7          	lui	x13,0x64
+  f8:	             04d72823          	sw	x13,80(x14)
      ###     graph[17] = 0b00000000000000010000000000000000;
-  fc:	                         000106b7          	lui	x13,0x10
- 100:	                         04d72a23          	sw	x13,84(x14)
+  fc:	             000106b7          	lui	x13,0x10
+ 100:	             04d72a23          	sw	x13,84(x14)
      ###     graph[18] = 0b00000000001010010000000000000000;
- 104:	                         002906b7          	lui	x13,0x290
- 108:	                         04d72c23          	sw	x13,88(x14)
+ 104:	             002906b7          	lui	x13,0x290
+ 108:	             04d72c23          	sw	x13,88(x14)
      ###     graph[19] = 0b00000000000101000000100000000000;
- 10c:	                         001416b7          	lui	x13,0x141
- 110:	                         80068693          	addi	x13,x13,-2048 # 140800 <__flash_size+0x140400>
- 114:	                         04d72e23          	sw	x13,92(x14)
+ 10c:	             001416b7          	lui	x13,0x141
+ 110:	             80068693          	addi	x13,x13,-2048 # 140800 <__flash_size+0x140400>
+ 114:	             04d72e23          	sw	x13,92(x14)
      ###     graph[20] = 0b00000000000010000000000000000000;
- 118:	                         000806b7          	lui	x13,0x80
- 11c:	                         06d72023          	sw	x13,96(x14)
+ 118:	             000806b7          	lui	x13,0x80
+ 11c:	             06d72023          	sw	x13,96(x14)
      ###     graph[21] = 0b00000000110001000000000000000000;
- 120:	                         00c406b7          	lui	x13,0xc40
- 124:	                         06d72223          	sw	x13,100(x14)
+ 120:	             00c406b7          	lui	x13,0xc40
+ 124:	             06d72223          	sw	x13,100(x14)
      ###     graph[22] = 0b00000000001000000000000000000000;
- 128:	                         002006b7          	lui	x13,0x200
- 12c:	                         06d72423          	sw	x13,104(x14)
+ 128:	             002006b7          	lui	x13,0x200
+ 12c:	             06d72423          	sw	x13,104(x14)
      ###     graph[23] = 0b01000001001000000000000000000000;
- 130:	                         412006b7          	lui	x13,0x41200
- 134:	                         06d72623          	sw	x13,108(x14)
+ 130:	             412006b7          	lui	x13,0x41200
+ 134:	             06d72623          	sw	x13,108(x14)
      ###     graph[24] = 0b00000010100000000000010000000000;
- 138:	                         028006b7          	lui	x13,0x2800
- 13c:	                         40068693          	addi	x13,x13,1024 # 2800400 <__global_pointer$+0x7ffc00>
- 140:	                         06d72823          	sw	x13,112(x14)
+ 138:	             028006b7          	lui	x13,0x2800
+ 13c:	             40068693          	addi	x13,x13,1024 # 2800400 <__global_pointer$+0x7ffc00>
+ 140:	             06d72823          	sw	x13,112(x14)
      ###     graph[25] = 0b00000001000000000000000000000000;
- 144:	                         010006b7          	lui	x13,0x1000
- 148:	                         06d72a23          	sw	x13,116(x14)
+ 144:	             010006b7          	lui	x13,0x1000
+ 148:	             06d72a23          	sw	x13,116(x14)
      ###     graph[26] = 0b00011000000000000000010000000000;
- 14c:	                         180006b7          	lui	x13,0x18000
- 150:	                         40068693          	addi	x13,x13,1024 # 18000400 <__global_pointer$+0x15fffc00>
- 154:	                         06d72c23          	sw	x13,120(x14)
+ 14c:	             180006b7          	lui	x13,0x18000
+ 150:	             40068693          	addi	x13,x13,1024 # 18000400 <__global_pointer$+0x15fffc00>
+ 154:	             06d72c23          	sw	x13,120(x14)
      ###     graph[27] = 0b00000100000000000000000000000000;
- 158:	                         040006b7          	lui	x13,0x4000
- 15c:	                         06d72e23          	sw	x13,124(x14)
+ 158:	             040006b7          	lui	x13,0x4000
+ 15c:	             06d72e23          	sw	x13,124(x14)
      ###     graph[28] = 0b01100100000000000000000000000000;
- 160:	                         640006b7          	lui	x13,0x64000
- 164:	                         08d72023          	sw	x13,128(x14)
+ 160:	             640006b7          	lui	x13,0x64000
+ 164:	             08d72023          	sw	x13,128(x14)
      ###     graph[29] = 0b00010000000000000000000000000000;
- 168:	                         100006b7          	lui	x13,0x10000
- 16c:	                         08d72223          	sw	x13,132(x14)
+ 168:	             100006b7          	lui	x13,0x10000
+ 16c:	             08d72223          	sw	x13,132(x14)
      ###     graph[30] = 0b10010000100000000000000000000000;
- 170:	                         908006b7          	lui	x13,0x90800
- 174:	                         08d72423          	sw	x13,136(x14)
+ 170:	             908006b7          	lui	x13,0x90800
+ 174:	             08d72423          	sw	x13,136(x14)
      ###     graph[31] = 0b01000000000000000000000000000000;
- 178:	                         400006b7          	lui	x13,0x40000
- 17c:	                         08d72623          	sw	x13,140(x14)
+ 178:	             400006b7          	lui	x13,0x40000
+ 17c:	             08d72623          	sw	x13,140(x14)
      ###     graph[13] = 0b00000000000000000001000000000000;
- 180:	                         04c72223          	sw	x12,68(x14)
+ 180:	             04c72223          	sw	x12,68(x14)
      ###         }
      ###     #endif
      ### 
      ###     set_graph(graph);
      ###     processed         = 0;
- 184:	                         0c072c23          	sw	x0,216(x14)
+ 184:	             0c072c23          	sw	x0,216(x14)
      ###     cost[START_POINT] = 0;
- 188:	                         00074683          	lbu	x13,0(x14)
+ 188:	             00074683          	lbu	x13,0(x14)
      ###     graph[ 0] = 0b00000000000000000000010001000010;
- 18c:	                         01070793          	addi	x15,x14,16
+ 18c:	             01070793          	addi	x15,x14,16
      ###     cost[START_POINT] = 0;
- 190:	                         02000593          	addi	x11,x0,32
- 194:	                         0ff6f693          	andi	x13,x13,255
- 198:	                         00d70733          	add	x14,x14,x13
+ 190:	             02000593          	addi	x11,x0,32
+ 194:	             0ff6f693          	andi	x13,x13,255
+ 198:	             00d70733          	add	x14,x14,x13
      ### 
      ###     // starting the algo
      ###     for(uint8_t j = 0; j<V; j++){
      ###         uint8_t index = 0;
      ###         int8_t  parent_index = min_cost(cost, processed);
- 19c:	                         020006b7          	lui	x13,0x2000
+ 19c:	             020006b7          	lui	x13,0x2000
      ###     cost[START_POINT] = 0;
- 1a0:	                         08070823          	sb	x0,144(x14)
+ 1a0:	             08070823          	sb	x0,144(x14)
      ###     int8_t  index =        -1;
- 1a4:	                         fff00f13          	addi	x30,x0,-1
+ 1a4:	             fff00e93          	addi	x29,x0,-1
      ###         if((!(processed & (1<<i))) && (cost[i]<min)) {
- 1a8:	                         00100893          	addi	x17,x0,1
+ 1a8:	             00100313          	addi	x6,x0,1
      ###     for(uint8_t i = 0; i<V; i++){
- 1ac:	                         02000e13          	addi	x28,x0,32
- 1b0:	                         09068f93          	addi	x31,x13,144 # 2000090 <__stack+0x50>
+ 1ac:	             02000e13          	addi	x28,x0,32
+ 1b0:	             09068f13          	addi	x30,x13,144 # 2000090 <__stack+0x50>
      ###         int8_t  parent_index = min_cost(cost, processed);
- 1b4:	               /-------> 0d86a303          	lw	x6,216(x13)
- 1b8:	               |         00000613          	addi	x12,x0,0
+ 1b4:	/----------> 0d86a883          	lw	x17,216(x13)
+ 1b8:	|            00000613          	addi	x12,x0,0
      ###     int8_t  index =        -1;
- 1bc:	               |         fff00713          	addi	x14,x0,-1
+ 1bc:	|            fff00713          	addi	x14,x0,-1
      ###     uint8_t min   = UINT8_MAX;
- 1c0:	               |         0ff00813          	addi	x16,x0,255
+ 1c0:	|            0ff00813          	addi	x16,x0,255
      ###         if((!(processed & (1<<i))) && (cost[i]<min)) {
- 1c4:	               |  /----> 00c89533          	sll	x10,x17,x12
- 1c8:	               |  |      00657533          	and	x10,x10,x6
- 1cc:	               |  |  /-- 00051e63          	bne	x10,x0,1e8 <path_planner.c.6b9a5783+0x52>
- 1d0:	               |  |  |   00c68533          	add	x10,x13,x12
- 1d4:	               |  |  |   09054503          	lbu	x10,144(x10)
- 1d8:	               |  |  +-- 01057863          	bgeu	x10,x16,1e8 <path_planner.c.6b9a5783+0x52>
+ 1c4:	|     /----> 00c31533          	sll	x10,x6,x12
+ 1c8:	|     |      01157533          	and	x10,x10,x17
+ 1cc:	|     |  /-- 00051e63          	bne	x10,x0,1e8 <path_planner.c.78b7007c+0x52>
+ 1d0:	|     |  |   00c68533          	add	x10,x13,x12
+ 1d4:	|     |  |   09054503          	lbu	x10,144(x10)
+ 1d8:	|     |  +-- 01057863          	bgeu	x10,x16,1e8 <path_planner.c.78b7007c+0x52>
      ###                 index = i;
- 1dc:	               |  |  |   01861713          	slli	x14,x12,0x18
- 1e0:	               |  |  |   41875713          	srai	x14,x14,0x18
- 1e4:	               |  |  |   00050813          	addi	x16,x10,0
+ 1dc:	|     |  |   01861713          	slli	x14,x12,0x18
+ 1e0:	|     |  |   41875713          	srai	x14,x14,0x18
+ 1e4:	|     |  |   00050813          	addi	x16,x10,0
      ###     for(uint8_t i = 0; i<V; i++){
- 1e8:	               |  |  \-> 00160613          	addi	x12,x12,1
- 1ec:	               |  \----- fdc61ce3          	bne	x12,x28,1c4 <path_planner.c.6b9a5783+0x2e>
+ 1e8:	|     |  \-> 00160613          	addi	x12,x12,1
+ 1ec:	|     \----- fdc61ce3          	bne	x12,x28,1c4 <path_planner.c.78b7007c+0x2e>
      ###         if(parent_index>=0){
- 1f0:	               |  /----- 05e71863          	bne	x14,x30,240 <path_planner.c.6b9a5783+0xaa>
+ 1f0:	|  /-------- 05d70e63          	beq	x14,x29,24c <path_planner.c.78b7007c+0xb6>
+     ###             for(index = 0; index<V; index++){
+     ###                 if((graph[parent_index] & (1<<index)) && (cost[index] > cost[parent_index] + 1)){
+ 1f4:	|  |         00271813          	slli	x16,x14,0x2
+ 1f8:	|  |         01078833          	add	x16,x15,x16
+ 1fc:	|  |         00000613          	addi	x12,x0,0
+ 200:	|  |         00e68fb3          	add	x31,x13,x14
+ 204:	|  |  /----> 00082883          	lw	x17,0(x16)
+ 208:	|  |  |      00c31533          	sll	x10,x6,x12
+ 20c:	|  |  |      01157533          	and	x10,x10,x17
+ 210:	|  |  |  /-- 02050263          	beq	x10,x0,234 <path_planner.c.78b7007c+0x9e>
+ 214:	|  |  |  |   090fc503          	lbu	x10,144(x31)
+ 218:	|  |  |  |   01e608b3          	add	x17,x12,x30
+ 21c:	|  |  |  |   0008c283          	lbu	x5,0(x17)
+ 220:	|  |  |  |   00150513          	addi	x10,x10,1
+ 224:	|  |  |  +-- 00555863          	bge	x10,x5,234 <path_planner.c.78b7007c+0x9e>
+     ###                         cost[index] = cost[parent_index] + 1;
+ 228:	|  |  |  |   00a88023          	sb	x10,0(x17)
+     ###                         parent[index] = parent_index;
+ 22c:	|  |  |  |   00c68533          	add	x10,x13,x12
+ 230:	|  |  |  |   0ae50823          	sb	x14,176(x10)
+     ###             for(index = 0; index<V; index++){
+ 234:	|  |  |  \-> 00160613          	addi	x12,x12,1
+ 238:	|  |  \----- fdc616e3          	bne	x12,x28,204 <path_planner.c.78b7007c+0x6e>
+     ###                 }
+     ###             }
+     ### 
+     ###             processed = processed | (1<<parent_index);
+ 23c:	|  |         0d86a603          	lw	x12,216(x13)
+ 240:	|  |         00e31733          	sll	x14,x6,x14
+ 244:	|  |         00c76733          	or	x14,x14,x12
+ 248:	|  |         0ce6ac23          	sw	x14,216(x13)
      ###     for(uint8_t j = 0; j<V; j++){
- 1f4:	         /-----|--|----> fff58593          	addi	x11,x11,-1
- 1f8:	         |     |  |      0ff5f593          	andi	x11,x11,255
- 1fc:	         |     \--|----- fa059ce3          	bne	x11,x0,1b4 <path_planner.c.6b9a5783+0x1e>
+ 24c:	|  \-------> fff58593          	addi	x11,x11,-1
+ 250:	|            0ff5f593          	andi	x11,x11,255
+ 254:	\----------- f60590e3          	bne	x11,x0,1b4 <path_planner.c.78b7007c+0x1e>
      ###         }
      ###         
      ###     }
      ### 
      ###     // decoding the output and backtracking
      ###     int8_t temp = END_POINT;
- 200:	         |  /-----|----> 020007b7          	lui	x15,0x2000
- 204:	         |  |     |      0047c783          	lbu	x15,4(x15) # 2000004 <__bss_end+0x4>
+ 258:	             020007b7          	lui	x15,0x2000
+ 25c:	             0047c783          	lbu	x15,4(x15) # 2000004 <__bss_end+0x4>
      ###     while (temp != -1 && idx < 16) {
- 208:	         |  |     |      020006b7          	lui	x13,0x2000
- 20c:	         |  |     |      fff00513          	addi	x10,x0,-1
+ 260:	             020006b7          	lui	x13,0x2000
+ 264:	             fff00513          	addi	x10,x0,-1
      ###     int8_t temp = END_POINT;
- 210:	         |  |     |      01879793          	slli	x15,x15,0x18
- 214:	         |  |     |      4187d793          	srai	x15,x15,0x18
+ 268:	             01879793          	slli	x15,x15,0x18
+ 26c:	             4187d793          	srai	x15,x15,0x18
      ###     while (temp != -1 && idx < 16) {
- 218:	         |  |     |      00f00593          	addi	x11,x0,15
+ 270:	             00f00593          	addi	x11,x0,15
      ###         path_planned[idx++] = temp;
      ###         temp = parent[temp];
- 21c:	         |  |     |      0b068813          	addi	x16,x13,176 # 20000b0 <__stack+0x70>
+ 274:	             0b068813          	addi	x16,x13,176 # 20000b0 <__stack+0x70>
      ###     while (temp != -1 && idx < 16) {
- 220:	   /-----|--|-----|--/-X 00a78863          	beq	x15,x10,230 <path_planner.c.6b9a5783+0x9a>
- 224:	   |     |  |     |  |   0dc6c703          	lbu	x14,220(x13)
- 228:	   |     |  |     |  |   0ff77713          	andi	x14,x14,255
- 22c:	   |  /--|--|-----|--|-- 08e5fa63          	bgeu	x11,x14,2c0 <path_planner.c.6b9a5783+0x12a>
+ 278:	   /-----/-X 00a78863          	beq	x15,x10,288 <path_planner.c.78b7007c+0xf2>
+ 27c:	   |     |   0dc6c703          	lbu	x14,220(x13)
+ 280:	   |     |   0ff77713          	andi	x14,x14,255
+ 284:	   |  /--|-- 00e5fa63          	bgeu	x11,x14,298 <path_planner.c.78b7007c+0x102>
      ###     }
      ### 
      ###     // Reverse path_planned to get the correct path from START_POINT to END_POINT
      ###     for (uint8_t i = 0; i < idx / 2; i++) {
- 230:	   |  |  |  |     |  \-> 020006b7          	lui	x13,0x2000
+ 288:	   |  |  \-> 020006b7          	lui	x13,0x2000
      ###     while (temp != -1 && idx < 16) {
- 234:	   |  |  |  |     |      00000713          	addi	x14,x0,0
- 238:	   |  |  |  |     |      0d068593          	addi	x11,x13,208 # 20000d0 <__stack+0x90>
- 23c:	/--|--|--|--|-----|----- 0ec0006f          	jal	x0,328 <path_planner.c.6b9a5783+0x192>
-     ###                 if((graph[parent_index] & (1<<index)) && (cost[index] > cost[parent_index] + 1)){
- 240:	|  |  |  |  |     \----> 00271313          	slli	x6,x14,0x2
- 244:	|  |  |  |  |            00678333          	add	x6,x15,x6
- 248:	|  |  |  |  |            00000613          	addi	x12,x0,0
- 24c:	|  |  |  |  |            00e682b3          	add	x5,x13,x14
- 250:	|  |  |  |  |        /-> 00032e83          	lw	x29,0(x6)
- 254:	|  |  |  |  |        |   00c89533          	sll	x10,x17,x12
- 258:	|  |  |  |  |        |   0ff67813          	andi	x16,x12,255
- 25c:	|  |  |  |  |        |   01d57533          	and	x10,x10,x29
- 260:	|  |  |  |  |     /--|-- 02051863          	bne	x10,x0,290 <path_planner.c.6b9a5783+0xfa>
-     ###             for(index = 0; index<V; index++){
- 264:	|  |  |  |  |  /--|--|-> 00160613          	addi	x12,x12,1
- 268:	|  |  |  |  |  |  |  \-- ffc614e3          	bne	x12,x28,250 <path_planner.c.6b9a5783+0xba>
- 26c:	|  |  |  |  |  |  |      02000813          	addi	x16,x0,32
-     ###             processed = processed | (1<<parent_index);
- 270:	|  |  |  |  |  |  |  /-> 0d86a603          	lw	x12,216(x13)
- 274:	|  |  |  |  |  |  |  |   00e89733          	sll	x14,x17,x14
- 278:	|  |  |  |  |  |  |  |   00c76733          	or	x14,x14,x12
- 27c:	|  |  |  |  |  |  |  |   0ce6ac23          	sw	x14,216(x13)
-     ###             if(index == END_POINT) break;
- 280:	|  |  |  |  |  |  |  |   0046c703          	lbu	x14,4(x13)
- 284:	|  |  |  |  |  |  |  |   0ff77713          	andi	x14,x14,255
- 288:	|  |  |  \--|--|--|--|-- f6e816e3          	bne	x16,x14,1f4 <path_planner.c.6b9a5783+0x5e>
- 28c:	|  |  |     \--|--|--|-- f75ff06f          	jal	x0,200 <path_planner.c.6b9a5783+0x6a>
-     ###                 if((graph[parent_index] & (1<<index)) && (cost[index] > cost[parent_index] + 1)){
- 290:	|  |  |        |  \--|-> 0902c503          	lbu	x10,144(x5)
- 294:	|  |  |        |     |   01f60eb3          	add	x29,x12,x31
- 298:	|  |  |        |     |   000ec383          	lbu	x7,0(x29)
- 29c:	|  |  |        |     |   00150513          	addi	x10,x10,1
- 2a0:	|  |  |        +-----|-- fc7552e3          	bge	x10,x7,264 <path_planner.c.6b9a5783+0xce>
-     ###                         cost[index] = cost[parent_index] + 1;
- 2a4:	|  |  |        |     |   00ae8023          	sb	x10,0(x29)
-     ###                         parent[index] = parent_index;
- 2a8:	|  |  |        |     |   00c68533          	add	x10,x13,x12
- 2ac:	|  |  |        |     |   0ae50823          	sb	x14,176(x10)
-     ###                         if(index == END_POINT) break; // considering all of equal weight edges
- 2b0:	|  |  |        |     |   0046c503          	lbu	x10,4(x13)
- 2b4:	|  |  |        |     |   0ff57513          	andi	x10,x10,255
- 2b8:	|  |  |        \-----|-- fb0516e3          	bne	x10,x16,264 <path_planner.c.6b9a5783+0xce>
- 2bc:	|  |  |              \-- fb5ff06f          	jal	x0,270 <path_planner.c.6b9a5783+0xda>
+ 28c:	   |  |      00000713          	addi	x14,x0,0
+ 290:	   |  |      0d068593          	addi	x11,x13,208 # 20000d0 <__stack+0x90>
+ 294:	/--|--|----- 06c0006f          	jal	x0,300 <path_planner.c.78b7007c+0x16a>
      ###         path_planned[idx++] = temp;
- 2c0:	|  |  \----------------> 0dc6c703          	lbu	x14,220(x13)
- 2c4:	|  |                     0ff77713          	andi	x14,x14,255
- 2c8:	|  |                     00170613          	addi	x12,x14,1
- 2cc:	|  |                     0ff67613          	andi	x12,x12,255
- 2d0:	|  |                     0cc68e23          	sb	x12,220(x13)
- 2d4:	|  |                     00e68733          	add	x14,x13,x14
- 2d8:	|  |                     0cf70823          	sb	x15,208(x14)
+ 298:	|  |  \----> 0dc6c703          	lbu	x14,220(x13)
+ 29c:	|  |         0ff77713          	andi	x14,x14,255
+ 2a0:	|  |         00170613          	addi	x12,x14,1
+ 2a4:	|  |         0ff67613          	andi	x12,x12,255
+ 2a8:	|  |         0cc68e23          	sb	x12,220(x13)
+ 2ac:	|  |         00e68733          	add	x14,x13,x14
+ 2b0:	|  |         0cf70823          	sb	x15,208(x14)
      ###         temp = parent[temp];
- 2dc:	|  |                     010787b3          	add	x15,x15,x16
- 2e0:	|  |                     00078783          	lb	x15,0(x15)
- 2e4:	|  \-------------------- f3dff06f          	jal	x0,220 <path_planner.c.6b9a5783+0x8a>
+ 2b4:	|  |         010787b3          	add	x15,x15,x16
+ 2b8:	|  |         00078783          	lb	x15,0(x15)
+ 2bc:	|  \-------- fbdff06f          	jal	x0,278 <path_planner.c.78b7007c+0xe2>
      ###         int8_t temp_swap = path_planned[i];
      ###         path_planned[i] = path_planned[idx - 1 - i];
- 2e8:	|                    /-> 0dc6c783          	lbu	x15,220(x13)
- 2ec:	|                    |   00b70633          	add	x12,x14,x11
+ 2c0:	|        /-> 0dc6c783          	lbu	x15,220(x13)
+ 2c4:	|        |   00b70633          	add	x12,x14,x11
      ###         int8_t temp_swap = path_planned[i];
- 2f0:	|                    |   00064503          	lbu	x10,0(x12)
+ 2c8:	|        |   00064503          	lbu	x10,0(x12)
      ###         path_planned[i] = path_planned[idx - 1 - i];
- 2f4:	|                    |   0ff7f793          	andi	x15,x15,255
- 2f8:	|                    |   fff78793          	addi	x15,x15,-1
- 2fc:	|                    |   40e787b3          	sub	x15,x15,x14
- 300:	|                    |   00f687b3          	add	x15,x13,x15
- 304:	|                    |   0d07c783          	lbu	x15,208(x15)
- 308:	|                    |   00f60023          	sb	x15,0(x12)
+ 2cc:	|        |   0ff7f793          	andi	x15,x15,255
+ 2d0:	|        |   fff78793          	addi	x15,x15,-1
+ 2d4:	|        |   40e787b3          	sub	x15,x15,x14
+ 2d8:	|        |   00f687b3          	add	x15,x13,x15
+ 2dc:	|        |   0d07c783          	lbu	x15,208(x15)
+ 2e0:	|        |   00f60023          	sb	x15,0(x12)
      ###         path_planned[idx - 1 - i] = temp_swap;
- 30c:	|                    |   0dc6c783          	lbu	x15,220(x13)
- 310:	|                    |   0ff7f793          	andi	x15,x15,255
- 314:	|                    |   fff78793          	addi	x15,x15,-1
- 318:	|                    |   40e787b3          	sub	x15,x15,x14
- 31c:	|                    |   00f687b3          	add	x15,x13,x15
- 320:	|                    |   0ca78823          	sb	x10,208(x15)
+ 2e4:	|        |   0dc6c783          	lbu	x15,220(x13)
+ 2e8:	|        |   0ff7f793          	andi	x15,x15,255
+ 2ec:	|        |   fff78793          	addi	x15,x15,-1
+ 2f0:	|        |   40e787b3          	sub	x15,x15,x14
+ 2f4:	|        |   00f687b3          	add	x15,x13,x15
+ 2f8:	|        |   0ca78823          	sb	x10,208(x15)
      ###     for (uint8_t i = 0; i < idx / 2; i++) {
- 324:	|                    |   00170713          	addi	x14,x14,1
- 328:	\--------------------|-> 0dc6c783          	lbu	x15,220(x13)
- 32c:	                     |   0ff77613          	andi	x12,x14,255
- 330:	                     |   0ff7f793          	andi	x15,x15,255
- 334:	                     |   0017d793          	srli	x15,x15,0x1
- 338:	                     \-- faf668e3          	bltu	x12,x15,2e8 <path_planner.c.6b9a5783+0x152>
+ 2fc:	|        |   00170713          	addi	x14,x14,1
+ 300:	\--------|-> 0dc6c783          	lbu	x15,220(x13)
+ 304:	         |   0ff77613          	andi	x12,x14,255
+ 308:	         |   0ff7f793          	andi	x15,x15,255
+ 30c:	         |   0017d793          	srli	x15,x15,0x1
+ 310:	         \-- faf668e3          	bltu	x12,x15,2c0 <path_planner.c.78b7007c+0x12a>
      ### 
      ### 
      ###     // ##############################################
      ### 
      ###     // the node values are written into data memory sequentially.
      ###     for (int i = 0; i < idx; ++i) {
- 33c:	                         00000713          	addi	x14,x0,0
- 340:	                         020007b7          	lui	x15,0x2000
- 344:	                  /----> 0dc7c683          	lbu	x13,220(x15) # 20000dc <__stack+0x9c>
- 348:	                  |      0ff6f693          	andi	x13,x13,255
- 34c:	                  |  /-- 00d74a63          	blt	x14,x13,360 <path_planner.c.6b9a5783+0x1ca>
+ 314:	             00000713          	addi	x14,x0,0
+ 318:	             020007b7          	lui	x15,0x2000
+ 31c:	      /----> 0dc7c683          	lbu	x13,220(x15) # 20000dc <__stack+0x9c>
+ 320:	      |      0ff6f693          	andi	x13,x13,255
+ 324:	      |  /-- 00d74a63          	blt	x14,x13,338 <path_planner.c.78b7007c+0x1a2>
      ###         NODE_POINT = path_planned[i];
      ###     }
      ###     // Path Planning Computation Done Flag
      ###     CPU_DONE = 1;
- 350:	                  |  |   00100713          	addi	x14,x0,1
- 354:	                  |  |   00e78623          	sb	x14,12(x15)
+ 328:	      |  |   00100713          	addi	x14,x0,1
+ 32c:	      |  |   00e78623          	sb	x14,12(x15)
      ###         _put_str("################################\n");
      ### 
      ###     #endif
      ### 
      ###     return 0;
- 358:	                  |  |   00000513          	addi	x10,x0,0
- 35c:	                  |  |   00008067          	jalr	x0,0(x1)
+ 330:	      |  |   00000513          	addi	x10,x0,0
+ 334:	      |  |   00008067          	jalr	x0,0(x1)
      ###         NODE_POINT = path_planned[i];
- 360:	                  |  \-> 00e786b3          	add	x13,x15,x14
- 364:	                  |      0d06c683          	lbu	x13,208(x13)
+ 338:	      |  \-> 00e786b3          	add	x13,x15,x14
+ 33c:	      |      0d06c683          	lbu	x13,208(x13)
      ###     for (int i = 0; i < idx; ++i) {
- 368:	                  |      00170713          	addi	x14,x14,1
+ 340:	      |      00170713          	addi	x14,x14,1
      ###         NODE_POINT = path_planned[i];
- 36c:	                  |      00d78423          	sb	x13,8(x15)
+ 344:	      |      00d78423          	sb	x13,8(x15)
      ###     for (int i = 0; i < idx; ++i) {
- 370:	                  \----- fd5ff06f          	jal	x0,344 <path_planner.c.6b9a5783+0x1ae>
+ 348:	      \----- fd5ff06f          	jal	x0,31c <path_planner.c.78b7007c+0x186>
 
-00000374 <_set_tls>:
- 374:	00050213          	addi	x4,x10,0
- 378:	00008067          	jalr	x0,0(x1)
+0000034c <_set_tls>:
+ 34c:	00050213          	addi	x4,x10,0
+ 350:	00008067          	jalr	x0,0(x1)
 
-0000037c <memcpy>:
- 37c:	       00050313          	addi	x6,x10,0
- 380:	/----- 00060e63          	beq	x12,x0,39c <memcpy+0x20>
- 384:	|  /-> 00058383          	lb	x7,0(x11)
- 388:	|  |   00730023          	sb	x7,0(x6)
- 38c:	|  |   fff60613          	addi	x12,x12,-1
- 390:	|  |   00130313          	addi	x6,x6,1
- 394:	|  |   00158593          	addi	x11,x11,1
- 398:	|  \-- fe0616e3          	bne	x12,x0,384 <memcpy+0x8>
- 39c:	\----> 00008067          	jalr	x0,0(x1)
+00000354 <memcpy>:
+ 354:	       00050313          	addi	x6,x10,0
+ 358:	/----- 00060e63          	beq	x12,x0,374 <memcpy+0x20>
+ 35c:	|  /-> 00058383          	lb	x7,0(x11)
+ 360:	|  |   00730023          	sb	x7,0(x6)
+ 364:	|  |   fff60613          	addi	x12,x12,-1
+ 368:	|  |   00130313          	addi	x6,x6,1
+ 36c:	|  |   00158593          	addi	x11,x11,1
+ 370:	|  \-- fe0616e3          	bne	x12,x0,35c <memcpy+0x8>
+ 374:	\----> 00008067          	jalr	x0,0(x1)
 
-000003a0 <memset>:
- 3a0:	       00050313          	addi	x6,x10,0
- 3a4:	/----- 00060a63          	beq	x12,x0,3b8 <memset+0x18>
- 3a8:	|  /-> 00b30023          	sb	x11,0(x6)
- 3ac:	|  |   fff60613          	addi	x12,x12,-1
- 3b0:	|  |   00130313          	addi	x6,x6,1
- 3b4:	|  \-- fe061ae3          	bne	x12,x0,3a8 <memset+0x8>
- 3b8:	\----> 00008067          	jalr	x0,0(x1)
+00000378 <memset>:
+ 378:	       00050313          	addi	x6,x10,0
+ 37c:	/----- 00060a63          	beq	x12,x0,390 <memset+0x18>
+ 380:	|  /-> 00b30023          	sb	x11,0(x6)
+ 384:	|  |   fff60613          	addi	x12,x12,-1
+ 388:	|  |   00130313          	addi	x6,x6,1
+ 38c:	|  \-- fe061ae3          	bne	x12,x0,380 <memset+0x8>
+ 390:	\----> 00008067          	jalr	x0,0(x1)
 
-000003bc <__text_end>:
- 3bc:	0000                	c.unimp
+00000394 <__text_end>:
+ 394:	0000                	c.unimp
 	...
