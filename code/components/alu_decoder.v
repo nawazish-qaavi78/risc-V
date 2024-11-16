@@ -26,7 +26,7 @@ always @(*) begin
 					 
                 3'b110:  ALUControl = 4'b0011; // or, ori
                 3'b111:  ALUControl = 4'b0010; // and, andi
-                default: ALUControl = 4'bxxxx; // ???
+                default: ALUControl = 4'bx; // ???
             endcase
     endcase
 end

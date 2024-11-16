@@ -28,11 +28,10 @@ end
 assign zero = (alu_out == 0);
 assign sign = alu_out[31];
 
-assign carry = (alu_ctrl == 4'b0000) ? (alu_out < a) : 
-					(alu_ctrl == 4'b0001) ? (a < b) : 1'b0; 
+assign carry = ((alu_ctrl == 4'b0000) && b[31]) || ((alu_ctrl == 4'b0001) && (a < b)); 
 					
-assign overflow = (alu_ctrl == 4'b0000) ? ((a[31] == b[31]) && (alu_out[31] != a[31])) :  
-						(alu_ctrl == 4'b0001) ? ((a[31] != b[31]) && (alu_out[31] != a[31])) : 1'b0;  
+assign overflow = (alu_out[31] != a[31]) && (alu_ctrl[3:1] == 3'b000) && (alu_ctrl[0] ^ (a[31] == b[31]));
+
 						
 assign flags = {zero, sign, carry, overflow};
 
