@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/simulation/modelsim
 vadder
-Z1 !s110 1731864276
+Z1 !s110 1731867664
 !i10b 1
 !s100 jXE67fZjiCj2W4l?`i:H?0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1731864276.000000
+Z6 !s108 1731867664.000000
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/adder.v|
 !i113 1
@@ -106,23 +106,23 @@ R7
 R8
 R9
 vdata_mem
-Z10 !s110 1731864275
+Z10 !s110 1731867663
 !i10b 1
-!s100 0i?JRgklhh@egVMmH;T?U2
+!s100 >o5gM<F06k9UC_=OICVkM2
 R2
-IcPDl250c>WgD2a242fFD@2
+Ibm[Ng=K5P1;aeUGZHBh`z2
 R3
 R0
-w1731864132
+w1731867615
 8C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v
 FC:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v
 !i122 2
-L0 4 100
+L0 1 83
 R5
 r1
 !s85 0
 31
-Z11 !s108 1731864275.000000
+Z11 !s108 1731867663.000000
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/data_mem.v|
 !i113 1
@@ -130,7 +130,7 @@ R7
 Z12 !s92 -vlog01compat -work work {+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code}
 R9
 vdatapath
-R1
+R10
 !i10b 1
 !s100 f1TdX5LC^>RJ;VeIRN;6Z0
 R2
@@ -146,7 +146,7 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/datapath.v|
 !i113 1
@@ -154,7 +154,7 @@ R7
 R8
 R9
 vimm_extend
-R1
+R10
 !i10b 1
 !s100 OHInWHN>XAI5f7nKRfBzR2
 R2
@@ -170,7 +170,7 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/imm_extend.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/imm_extend.v|
 !i113 1
@@ -202,7 +202,7 @@ R7
 R12
 R9
 vmain_decoder
-R1
+R10
 !i10b 1
 !s100 DX9?C@zgBXHA3lQ6S^zIo1
 R2
@@ -218,7 +218,7 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/main_decoder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/main_decoder.v|
 !i113 1
@@ -226,7 +226,7 @@ R7
 R8
 R9
 vmux2
-R1
+R10
 !i10b 1
 !s100 ifK8COc02]NDN7DP`BU<[1
 R2
@@ -242,7 +242,7 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/mux2.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components|C:/Users/nawaz/OneDrive/Desktop/programing/verilog/eyantra task 1/t1c_riscv_cpu/risc-V/code/components/mux2.v|
 !i113 1
@@ -250,7 +250,7 @@ R7
 R8
 R9
 vmux3
-R1
+R10
 !i10b 1
 !s100 fShz_RzH66YN6G@4dH?@Y3
 R2
