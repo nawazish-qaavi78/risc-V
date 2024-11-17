@@ -20,29 +20,39 @@ assign byte_select = wr_addr[1:0];
 assign half_select =   wr_addr[1];
 
 
+reg [DATA_WIDTH-1:0] write_mask;
+
+always @(*) begin
+    case (funct3)
+        3'b000: write_mask = (byte_select == 2'b00) ? 32'h000000FF :
+                              (byte_select == 2'b01) ? 32'h0000FF00 :
+                              (byte_select == 2'b10) ? 32'h00FF0000 :
+                                                       32'hFF000000;
+        3'b001: write_mask = (half_select == 1'b0) ? 32'h0000FFFF : 32'hFFFF0000;
+        3'b010: write_mask = 32'hFFFFFFFF;
+        default: write_mask = 32'h00000000;
+    endcase
+end
+
 // synchronous write logic
 always @(posedge clk) begin
-    if (wr_en) begin 
-	 // decoding funct3 to perform right write operation
-		case(funct3)
-			3'b000: begin
-				case(byte_select)
-					2'b00: data_ram[word_addr][7:0]  <= wr_data[7:0];//sb
-					2'b01: data_ram[word_addr][15:8]  <= wr_data[7:0];//sb
-					2'b10: data_ram[word_addr][23:16]  <= wr_data[7:0];//sb
-					2'b11: data_ram[word_addr][31:24]  <= wr_data[7:0];//sb
-				endcase
-			end 
-			3'b001: begin
-				case(half_select)
-					1'b0: data_ram[word_addr][15:0] <= wr_data[15:0]; // sh
-					1'b1: data_ram[word_addr][31:16] <= wr_data[15:0]; // sh
-				endcase
-			end 
-			3'b010: data_ram[word_addr] <= wr_data; // sw
-		endcase
-		
-	 end
+    if (wr_en) begin
+        case (funct3)
+            // Store byte (sb): Write only the first 8 bits of wr_data to the selected byte
+            3'b000: data_ram[word_addr] <= (data_ram[word_addr] & ~write_mask) |
+                                           ({4{wr_data[7:0]}} & write_mask);
+
+            // Store halfword (sh): Write only the first 16 bits of wr_data to the selected halfword
+            3'b001: data_ram[word_addr] <= (data_ram[word_addr] & ~write_mask) |
+                                           ({2{wr_data[15:0]}} & write_mask);
+
+            // Store word (sw): Write all 32 bits of wr_data
+            3'b010: data_ram[word_addr] <= wr_data;
+
+            // Default case: Do nothing (optional, in case synthesis tools generate warnings)
+            default: data_ram[word_addr] <= data_ram[word_addr];
+			endcase
+    end
 end
 
 
@@ -52,7 +62,7 @@ always @(*) begin
 		// lb
 	   3'b000: begin
 			case(byte_select)
-				2'b00: rd_data_mem <= {{24{data_ram[word_addr][7]}}, data_ram[word_addr][7:0]};
+				2'b00: rd_data_mem <= {{24{data_ram[word_addr][7]}},  data_ram[word_addr][7:0]};
 				2'b01: rd_data_mem <= {{24{data_ram[word_addr][15]}}, data_ram[word_addr][15:8]};
 				2'b10: rd_data_mem <= {{24{data_ram[word_addr][23]}}, data_ram[word_addr][23:16]};
 				2'b11: rd_data_mem <= {{24{data_ram[word_addr][31]}}, data_ram[word_addr][31:24]};

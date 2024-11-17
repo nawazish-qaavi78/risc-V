@@ -165,8 +165,8 @@ int main(int argc, char const *argv[]) {
         int8_t  parent_index = min_cost(cost, processed);
         if(parent_index>=0){
             for(index = 0; index<V; index++){
-                if((graph[parent_index] & (1<<index)) && (cost[index] > cost[parent_index] + 1)){
-                        cost[index] = cost[parent_index] + 1;
+                if((graph[parent_index] & (1<<index)) && (cost[index] > cost[parent_index] + 0b1)){
+                        cost[index] = cost[parent_index] + 0b1;
                         parent[index] = parent_index;
                 }
             }
@@ -178,7 +178,7 @@ int main(int argc, char const *argv[]) {
 
     // decoding the output and backtracking
     int8_t temp = END_POINT;
-    while (temp != -1 && idx < 16) {
+    while (temp != -1 && idx < (uint8_t)16) {
         path_planned[idx++] = temp;
         temp = parent[temp];
     }
@@ -186,8 +186,8 @@ int main(int argc, char const *argv[]) {
     // Reverse path_planned to get the correct path from START_POINT to END_POINT
     for (uint8_t i = 0; i < idx / 2; i++) {
         int8_t temp_swap = path_planned[i];
-        path_planned[i] = path_planned[idx - 1 - i];
-        path_planned[idx - 1 - i] = temp_swap;
+        path_planned[i] = path_planned[idx - 0b1 - i];
+        path_planned[idx - 0b1 - i] = temp_swap;
     }
 
 

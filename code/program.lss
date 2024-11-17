@@ -280,7 +280,7 @@ Disassembly of section .text:
      ###         if(parent_index>=0){
  1f0:	|  /-------- 05d70e63          	beq	x14,x29,24c <path_planner.c.78b7007c+0xb6>
      ###             for(index = 0; index<V; index++){
-     ###                 if((graph[parent_index] & (1<<index)) && (cost[index] > cost[parent_index] + 1)){
+     ###                 if((graph[parent_index] & (1<<index)) && (cost[index] > cost[parent_index] + 0b1)){
  1f4:	|  |         00271813          	slli	x16,x14,0x2
  1f8:	|  |         01078833          	add	x16,x15,x16
  1fc:	|  |         00000613          	addi	x12,x0,0
@@ -294,7 +294,7 @@ Disassembly of section .text:
  21c:	|  |  |  |   0008c283          	lbu	x5,0(x17)
  220:	|  |  |  |   00150513          	addi	x10,x10,1
  224:	|  |  |  +-- 00555863          	bge	x10,x5,234 <path_planner.c.78b7007c+0x9e>
-     ###                         cost[index] = cost[parent_index] + 1;
+     ###                         cost[index] = cost[parent_index] + 0b1;
  228:	|  |  |  |   00a88023          	sb	x10,0(x17)
      ###                         parent[index] = parent_index;
  22c:	|  |  |  |   00c68533          	add	x10,x13,x12
@@ -322,18 +322,18 @@ Disassembly of section .text:
      ###     int8_t temp = END_POINT;
  258:	             020007b7          	lui	x15,0x2000
  25c:	             0047c783          	lbu	x15,4(x15) # 2000004 <__bss_end+0x4>
-     ###     while (temp != -1 && idx < 16) {
+     ###     while (temp != -1 && idx < (uint8_t)16) {
  260:	             020006b7          	lui	x13,0x2000
  264:	             fff00513          	addi	x10,x0,-1
      ###     int8_t temp = END_POINT;
  268:	             01879793          	slli	x15,x15,0x18
  26c:	             4187d793          	srai	x15,x15,0x18
-     ###     while (temp != -1 && idx < 16) {
+     ###     while (temp != -1 && idx < (uint8_t)16) {
  270:	             00f00593          	addi	x11,x0,15
      ###         path_planned[idx++] = temp;
      ###         temp = parent[temp];
  274:	             0b068813          	addi	x16,x13,176 # 20000b0 <__stack+0x70>
-     ###     while (temp != -1 && idx < 16) {
+     ###     while (temp != -1 && idx < (uint8_t)16) {
  278:	   /-----/-X 00a78863          	beq	x15,x10,288 <path_planner.c.78b7007c+0xf2>
  27c:	   |     |   0dc6c703          	lbu	x14,220(x13)
  280:	   |     |   0ff77713          	andi	x14,x14,255
@@ -343,7 +343,7 @@ Disassembly of section .text:
      ###     // Reverse path_planned to get the correct path from START_POINT to END_POINT
      ###     for (uint8_t i = 0; i < idx / 2; i++) {
  288:	   |  |  \-> 020006b7          	lui	x13,0x2000
-     ###     while (temp != -1 && idx < 16) {
+     ###     while (temp != -1 && idx < (uint8_t)16) {
  28c:	   |  |      00000713          	addi	x14,x0,0
  290:	   |  |      0d068593          	addi	x11,x13,208 # 20000d0 <__stack+0x90>
  294:	/--|--|----- 06c0006f          	jal	x0,300 <path_planner.c.78b7007c+0x16a>
@@ -360,19 +360,19 @@ Disassembly of section .text:
  2b8:	|  |         00078783          	lb	x15,0(x15)
  2bc:	|  \-------- fbdff06f          	jal	x0,278 <path_planner.c.78b7007c+0xe2>
      ###         int8_t temp_swap = path_planned[i];
-     ###         path_planned[i] = path_planned[idx - 1 - i];
+     ###         path_planned[i] = path_planned[idx - 0b1 - i];
  2c0:	|        /-> 0dc6c783          	lbu	x15,220(x13)
  2c4:	|        |   00b70633          	add	x12,x14,x11
      ###         int8_t temp_swap = path_planned[i];
  2c8:	|        |   00064503          	lbu	x10,0(x12)
-     ###         path_planned[i] = path_planned[idx - 1 - i];
+     ###         path_planned[i] = path_planned[idx - 0b1 - i];
  2cc:	|        |   0ff7f793          	andi	x15,x15,255
  2d0:	|        |   fff78793          	addi	x15,x15,-1
  2d4:	|        |   40e787b3          	sub	x15,x15,x14
  2d8:	|        |   00f687b3          	add	x15,x13,x15
  2dc:	|        |   0d07c783          	lbu	x15,208(x15)
  2e0:	|        |   00f60023          	sb	x15,0(x12)
-     ###         path_planned[idx - 1 - i] = temp_swap;
+     ###         path_planned[idx - 0b1 - i] = temp_swap;
  2e4:	|        |   0dc6c783          	lbu	x15,220(x13)
  2e8:	|        |   0ff7f793          	andi	x15,x15,255
  2ec:	|        |   fff78793          	addi	x15,x15,-1

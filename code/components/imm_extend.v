@@ -5,7 +5,6 @@ module imm_extend (
     output reg [31:0] immext
 );
 
-// Define constants for convenience and readability
 localparam I_TYPE   = 3'b000;
 localparam S_TYPE   = 3'b001;
 localparam B_TYPE   = 3'b010;
